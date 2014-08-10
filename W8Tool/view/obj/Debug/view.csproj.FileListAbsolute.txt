@@ -1,3 +1,12 @@
 c:\users\debashish\documents\visual studio 2012\Projects\W8Tool\view\bin\Debug\view.exe.config
 C:\Users\Debashish\Documents\GitHub\W8ToolProject\W8Tool\view\bin\Debug\view.exe.config
 C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\view.exe.config
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\view.exe.config
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\view.exe
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\view.pdb
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.csprojResolveAssemblyReference.cache
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.Form1.resources
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.Properties.Resources.resources
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.csproj.GenerateResource.Cache
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.exe
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.pdb
