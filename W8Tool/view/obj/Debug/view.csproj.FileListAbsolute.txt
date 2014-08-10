@@ -19,3 +19,11 @@ C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\vi
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.Form1.resources
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.Properties.Resources.resources
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.csproj.GenerateResource.Cache
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.exe
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.pdb
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\view.exe
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\view.pdb
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.csprojResolveAssemblyReference.cache
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.Form1.resources
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.Properties.Resources.resources
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.csproj.GenerateResource.Cache

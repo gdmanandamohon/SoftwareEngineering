@@ -22,6 +22,11 @@ namespace view
             clock_label.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
+        private void timer_battery_Tick(object sender, EventArgs e)
+        {
+            battery_label.Text = performanceCounter_battery.NextValue().ToString()+"%";
+        }
+
 
     }
 }
