@@ -1,1 +1,2 @@
 c:\users\debashish\documents\visual studio 2012\Projects\W8Tool\view\bin\Debug\view.exe.config
+C:\Users\Debashish\Documents\GitHub\W8ToolProject\W8Tool\view\bin\Debug\view.exe.config
