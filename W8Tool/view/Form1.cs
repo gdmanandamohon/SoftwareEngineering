@@ -16,5 +16,12 @@ namespace view
         {
             InitializeComponent();
         }
+
+        private void timer_clock_Tick(object sender, EventArgs e)
+        {
+            clock_label.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+
     }
 }
