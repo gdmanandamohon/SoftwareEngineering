@@ -36,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.performanceCounter_battery = new System.Diagnostics.PerformanceCounter();
             this.timer_battery = new System.Windows.Forms.Timer(this.components);
+            this.cpu_label = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.performanceCounter_battery)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +83,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(14, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 25);
+            this.label3.Size = new System.Drawing.Size(71, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "RAM:";
+            this.label3.Text = "RAM :";
             // 
             // performanceCounter_battery
             // 
@@ -96,11 +98,33 @@
             this.timer_battery.Interval = 1000;
             this.timer_battery.Tick += new System.EventHandler(this.timer_battery_Tick);
             // 
+            // cpu_label
+            // 
+            this.cpu_label.AutoSize = true;
+            this.cpu_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpu_label.Location = new System.Drawing.Point(92, 110);
+            this.cpu_label.Name = "cpu_label";
+            this.cpu_label.Size = new System.Drawing.Size(70, 25);
+            this.cpu_label.TabIndex = 5;
+            this.cpu_label.Text = "label2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 25);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "CPU :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 257);
+            this.Controls.Add(this.cpu_label);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.battery_label);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.clock_label);
@@ -123,6 +147,8 @@
         private System.Windows.Forms.Label label3;
         private System.Diagnostics.PerformanceCounter performanceCounter_battery;
         private System.Windows.Forms.Timer timer_battery;
+        private System.Windows.Forms.Label cpu_label;
+        private System.Windows.Forms.Label label4;
     }
 }
 
