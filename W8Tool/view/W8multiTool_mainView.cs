@@ -16,6 +16,20 @@ namespace view
         public W8multiTool_mainView()
         {
             InitializeComponent();
+
+            TitleBar.Size = new System.Drawing.Size(165, 20);
+            Exit_PicBox.Location = new System.Drawing.Point(145, 0);
+            Max_PicBox.Location = new System.Drawing.Point(125, 0);
+            this.Size = new System.Drawing.Size(165, 115);
+
+            CpuRate_panel.Hide();
+            RamRate_panel.Hide();
+            HddRate_panel.Hide();
+
+            Hdd_label.Location = new System.Drawing.Point(92, 26);
+            Hdd_Count_label.Location = new System.Drawing.Point(97, 52);
+            Battery_label.Location = new System.Drawing.Point(92, 68);
+            Battery_Count_label.Location = new System.Drawing.Point(97, 96);
         }
 
         Point formloc, curloc = new Point(0, 0);
@@ -58,6 +72,83 @@ namespace view
         private void Exit_PicBox_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Exit_PicBox_MouseEnter(object sender, EventArgs e)
+        {
+            Exit_PicBox.BackgroundImage = Properties.Resources.exit_enter;
+        }
+
+        private void Exit_PicBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            Exit_PicBox.BackgroundImage = Properties.Resources.exit_click;
+        }
+
+        private void Exit_PicBox_MouseLeave(object sender, EventArgs e)
+        {
+            Exit_PicBox.BackgroundImage = Properties.Resources.exit;
+        }
+
+        private void Max_PicBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            Max_PicBox.BackColor = Color.Gainsboro;
+        }
+
+        private void Max_PicBox_MouseEnter(object sender, EventArgs e)
+        {
+            Max_PicBox.BackColor = Color.Silver;
+        }
+
+        private void Max_PicBox_MouseLeave(object sender, EventArgs e)
+        {
+            Max_PicBox.BackColor = Color.Gray;
+        }
+        int i=0;
+        private void Max_PicBox_Click(object sender, EventArgs e)
+        {
+            if (i % 2 == 0)
+            {
+                this.Size = new System.Drawing.Size(189, 223);
+                i++;
+                CpuRate_panel.Show();
+                RamRate_panel.Show();
+                HddRate_panel.Show();
+
+                TitleBar.Size = new System.Drawing.Size(188, 20);
+                Exit_PicBox.Location = new System.Drawing.Point(168, 0);
+                Max_PicBox.Location = new System.Drawing.Point(148, 0);
+
+                Hdd_label.Location = new System.Drawing.Point(-1, 121);
+                Hdd_Count_label.Location = new System.Drawing.Point(7, 149);
+                Battery_label.Location = new System.Drawing.Point(2, 173);
+                Battery_Count_label.Location = new System.Drawing.Point(9, 200);
+
+                //Clock_label.Size = new System.Drawing.Size(113, 24);
+                //Clock_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, FontStyle.Bold);
+            }
+
+            else
+            {
+                i++;
+
+                TitleBar.Size = new System.Drawing.Size(165, 20);
+                Exit_PicBox.Location = new System.Drawing.Point(145, 0);
+                Max_PicBox.Location = new System.Drawing.Point(125, 0);
+                this.Size = new System.Drawing.Size(165, 115);
+
+                CpuRate_panel.Hide();
+                RamRate_panel.Hide();
+                HddRate_panel.Hide();
+
+                Hdd_label.Location = new System.Drawing.Point(92, 26);
+                Hdd_Count_label.Location = new System.Drawing.Point(97, 52);
+                Battery_label.Location = new System.Drawing.Point(92, 68);
+                Battery_Count_label.Location = new System.Drawing.Point(97, 96); ;
+
+
+                //Clock_label.Size = new System.Drawing.Size(70, 25);
+                //Clock_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f, FontStyle.Bold);
+            }
         }
 
 

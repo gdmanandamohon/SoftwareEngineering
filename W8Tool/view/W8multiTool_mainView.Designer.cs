@@ -34,7 +34,7 @@
             this.Exit_PicBox = new System.Windows.Forms.PictureBox();
             this.Clock_Count_label = new System.Windows.Forms.Label();
             this.Max_PicBox = new System.Windows.Forms.PictureBox();
-            this.Another_label = new System.Windows.Forms.Label();
+            this.Battery_label = new System.Windows.Forms.Label();
             this.Battery_Count_label = new System.Windows.Forms.Label();
             this.Hdd_Count_label = new System.Windows.Forms.Label();
             this.Hdd_label = new System.Windows.Forms.Label();
@@ -83,6 +83,9 @@
             this.Exit_PicBox.TabIndex = 10;
             this.Exit_PicBox.TabStop = false;
             this.Exit_PicBox.Click += new System.EventHandler(this.Exit_PicBox_Click);
+            this.Exit_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Exit_PicBox_MouseDown);
+            this.Exit_PicBox.MouseEnter += new System.EventHandler(this.Exit_PicBox_MouseEnter);
+            this.Exit_PicBox.MouseLeave += new System.EventHandler(this.Exit_PicBox_MouseLeave);
             // 
             // Clock_Count_label
             // 
@@ -107,17 +110,21 @@
             this.Max_PicBox.Size = new System.Drawing.Size(20, 20);
             this.Max_PicBox.TabIndex = 9;
             this.Max_PicBox.TabStop = false;
+            this.Max_PicBox.Click += new System.EventHandler(this.Max_PicBox_Click);
+            this.Max_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Max_PicBox_MouseDown);
+            this.Max_PicBox.MouseEnter += new System.EventHandler(this.Max_PicBox_MouseEnter);
+            this.Max_PicBox.MouseLeave += new System.EventHandler(this.Max_PicBox_MouseLeave);
             // 
-            // Another_label
+            // Battery_label
             // 
-            this.Another_label.AutoSize = true;
-            this.Another_label.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Another_label.Location = new System.Drawing.Point(5, 168);
-            this.Another_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Another_label.Name = "Another_label";
-            this.Another_label.Size = new System.Drawing.Size(69, 20);
-            this.Another_label.TabIndex = 28;
-            this.Another_label.Text = "BATTERY";
+            this.Battery_label.AutoSize = true;
+            this.Battery_label.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Battery_label.Location = new System.Drawing.Point(5, 168);
+            this.Battery_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Battery_label.Name = "Battery_label";
+            this.Battery_label.Size = new System.Drawing.Size(69, 20);
+            this.Battery_label.TabIndex = 28;
+            this.Battery_label.Text = "BATTERY";
             // 
             // Battery_Count_label
             // 
@@ -230,6 +237,7 @@
             // 
             // timer_w8_positioning
             // 
+            this.timer_w8_positioning.Interval = 1;
             this.timer_w8_positioning.Tick += new System.EventHandler(this.timer_w8_positioning_Tick);
             // 
             // W8multiTool_mainView
@@ -242,7 +250,7 @@
             this.Controls.Add(this.HddRate_panel);
             this.Controls.Add(this.RamRate_panel);
             this.Controls.Add(this.CpuRate_panel);
-            this.Controls.Add(this.Another_label);
+            this.Controls.Add(this.Battery_label);
             this.Controls.Add(this.Battery_Count_label);
             this.Controls.Add(this.Hdd_Count_label);
             this.Controls.Add(this.Hdd_label);
@@ -270,7 +278,7 @@
         private System.Windows.Forms.PictureBox Exit_PicBox;
         private System.Windows.Forms.Label Clock_Count_label;
         private System.Windows.Forms.PictureBox Max_PicBox;
-        private System.Windows.Forms.Label Another_label;
+        private System.Windows.Forms.Label Battery_label;
         private System.Windows.Forms.Label Battery_Count_label;
         private System.Windows.Forms.Label Hdd_Count_label;
         private System.Windows.Forms.Label Hdd_label;
