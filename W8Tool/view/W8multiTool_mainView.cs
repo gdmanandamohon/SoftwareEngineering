@@ -155,9 +155,10 @@ namespace view
         }
         private void timer_PerformanceCounter_Tick(object sender, EventArgs e)
         {        
-            Cpu_Count_label.Text = mainviewController_obj.ProcessorUsages()+"%";
+            Cpu_Count_label.Text = mainviewController_obj.ProcessorUsages()+" %";
             Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + " MB";
-            Hdd_Count_label.Text = mainviewController_obj.DiskUsages()+"";
+            Hdd_Count_label.Text = mainviewController_obj.DiskUsages()+" MB";
+            Battery_Count_label.Text=mainviewController_obj.PowerCalculator()+" %";
         }
 
        

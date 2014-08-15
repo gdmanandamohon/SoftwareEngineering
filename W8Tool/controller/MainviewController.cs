@@ -9,12 +9,12 @@ namespace controller
 {
    public  class MainviewController
     {
-        
-        public int ProcessorUsages()
-        {
-            PerformanceCounter pf_processorCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
-            int processorUsage = (int)pf_processorCounter.NextValue();
-            return processorUsage;
+        protected PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+
+        public String ProcessorUsages()
+        {        
+            int processorUsage = (int)cpuCounter.NextValue();
+            return processorUsage.ToString();
         }
         
         public float MemoryUsage()
@@ -27,15 +27,19 @@ namespace controller
             return memoryFree;
         }
 
-        public float DiskUsages()
+        protected PerformanceCounter logical_disk = new PerformanceCounter("LogicalDisk", "% Disk Time", "_Total");
+
+        public String DiskUsages()
         {
-            PerformanceCounter pf_DiskCounter = new PerformanceCounter("LogicalDisk", "% Disk Time", "_Total");
-            float x = (float)pf_DiskCounter.NextValue();
-            return x;
+            int x = (int)logical_disk.NextValue();
+            return x.ToString();
         }
-        public float PowerCalculator()
+        protected PerformanceCounter powerCounter = new PerformanceCounter("Power Meter", "Power", "_Total");
+
+        public String PowerCalculator()
         {
-            return 0;
+            int power_remain = (int)powerCounter.NextValue();
+            return power_remain.ToString();
         }
     }
 }
