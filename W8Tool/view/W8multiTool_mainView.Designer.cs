@@ -47,6 +47,7 @@
             this.RamRate_panel = new System.Windows.Forms.Panel();
             this.CpuRate_panel = new System.Windows.Forms.Panel();
             this.timer_w8_positioning = new System.Windows.Forms.Timer(this.components);
+            this.timer_PerformanceCounter = new System.Windows.Forms.Timer(this.components);
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
@@ -240,6 +241,12 @@
             this.timer_w8_positioning.Interval = 1;
             this.timer_w8_positioning.Tick += new System.EventHandler(this.timer_w8_positioning_Tick);
             // 
+            // timer_PerformanceCounter
+            // 
+            this.timer_PerformanceCounter.Enabled = true;
+            this.timer_PerformanceCounter.Interval = 1000;
+            this.timer_PerformanceCounter.Tick += new System.EventHandler(this.timer_PerformanceCounter_Tick);
+            // 
             // W8multiTool_mainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +298,7 @@
         private System.Windows.Forms.Panel RamRate_panel;
         private System.Windows.Forms.Panel CpuRate_panel;
         private System.Windows.Forms.Timer timer_w8_positioning;
+        private System.Windows.Forms.Timer timer_PerformanceCounter;
     }
 }
 

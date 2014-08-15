@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using controller;
 
 namespace view
 {
     public partial class W8multiTool_mainView : Form
     {
+        MainviewController mainviewController_obj = new MainviewController();
         public W8multiTool_mainView()
         {
             InitializeComponent();
@@ -104,6 +106,7 @@ namespace view
             Max_PicBox.BackColor = Color.Gray;
         }
         int i=0;
+
         private void Max_PicBox_Click(object sender, EventArgs e)
         {
             if (i % 2 == 0)
@@ -150,6 +153,13 @@ namespace view
                 //Clock_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f, FontStyle.Bold);
             }
         }
+        private void timer_PerformanceCounter_Tick(object sender, EventArgs e)
+        {        
+            Cpu_Count_label.Text = mainviewController_obj.ProcessorUsages()+"%";
+            Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + "MB";
+        }
+
+       
 
 
         
