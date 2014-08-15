@@ -157,6 +157,7 @@ namespace view
         {        
             Cpu_Count_label.Text = mainviewController_obj.ProcessorUsages()+"%";
             Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + " MB";
+            Hdd_Count_label.Text = mainviewController_obj.DiskUsages()+"";
         }
 
        

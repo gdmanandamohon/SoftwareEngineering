@@ -27,6 +27,15 @@ namespace controller
             return memoryFree;
         }
 
-        
+        public float DiskUsages()
+        {
+            PerformanceCounter pf_DiskCounter = new PerformanceCounter("LogicalDisk", "% Disk Time", "_Total");
+            float x = (float)pf_DiskCounter.NextValue();
+            return x;
+        }
+        public float PowerCalculator()
+        {
+            return 0;
+        }
     }
 }
