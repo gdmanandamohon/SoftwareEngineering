@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-
+using System.Management;
 namespace controller
 {
    public  class MainviewController
@@ -16,15 +16,17 @@ namespace controller
             int processorUsage = (int)pf_processorCounter.NextValue();
             return processorUsage;
         }
+        
         public float MemoryUsage()
         {
-            PerformanceCounter pf_MemoryCounter_Total = new PerformanceCounter("Memory", "Committed Bytes", "");
+            PerformanceCounter pf_MemoryCounter_Total = new PerformanceCounter("Memory", "Free & Zero Page List Bytes", "");
             float total = (pf_MemoryCounter_Total.NextValue() / 1024)/1024;
             PerformanceCounter pf_MemoryCounter_Avaiable = new PerformanceCounter("Memory", "Available MBytes", "");
-            float memoryUseage = pf_MemoryCounter_Avaiable.NextValue();
-            float percentage = (total-memoryUseage)/total;
-            return percentage;
+            float memoryFree = pf_MemoryCounter_Avaiable.NextValue();
+            float percentage = (total - memoryFree) / total;
+            return memoryFree;
         }
+
         
     }
 }

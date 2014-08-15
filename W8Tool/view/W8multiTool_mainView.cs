@@ -156,7 +156,7 @@ namespace view
         private void timer_PerformanceCounter_Tick(object sender, EventArgs e)
         {        
             Cpu_Count_label.Text = mainviewController_obj.ProcessorUsages()+"%";
-            Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + "MB";
+            Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + " MB";
         }
 
        
