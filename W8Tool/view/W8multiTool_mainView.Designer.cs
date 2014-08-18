@@ -48,9 +48,11 @@
             this.CpuRate_panel = new System.Windows.Forms.Panel();
             this.timer_w8_positioning = new System.Windows.Forms.Timer(this.components);
             this.timer_PerformanceCounter = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
+            this.CpuRate_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -230,6 +232,7 @@
             // CpuRate_panel
             // 
             this.CpuRate_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CpuRate_panel.Controls.Add(this.button1);
             this.CpuRate_panel.Location = new System.Drawing.Point(76, 24);
             this.CpuRate_panel.Margin = new System.Windows.Forms.Padding(2);
             this.CpuRate_panel.Name = "CpuRate_panel";
@@ -246,6 +249,15 @@
             this.timer_PerformanceCounter.Enabled = true;
             this.timer_PerformanceCounter.Interval = 1000;
             this.timer_PerformanceCounter.Tick += new System.EventHandler(this.timer_PerformanceCounter_Tick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(24, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // W8multiTool_mainView
             // 
@@ -273,6 +285,7 @@
             this.TitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).EndInit();
+            this.CpuRate_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +312,7 @@
         private System.Windows.Forms.Panel CpuRate_panel;
         private System.Windows.Forms.Timer timer_w8_positioning;
         private System.Windows.Forms.Timer timer_PerformanceCounter;
+        private System.Windows.Forms.Button button1;
     }
 }
 
