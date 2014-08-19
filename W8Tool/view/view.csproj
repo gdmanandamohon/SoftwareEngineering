@@ -79,12 +79,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\maximize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\menu_enter.png" />
   </ItemGroup>
   <ItemGroup>
@@ -100,13 +94,22 @@
     <None Include="Resources\exit_enter.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\file1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\controller\controller.csproj">
       <Project>{1021de37-18c8-4b1a-b157-bfa87539d890}</Project>
       <Name>controller</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_enter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

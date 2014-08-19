@@ -22,6 +22,7 @@ namespace view
             TitleBar.Size = new System.Drawing.Size(165, 20);
             Exit_PicBox.Location = new System.Drawing.Point(145, 0);
             Max_PicBox.Location = new System.Drawing.Point(125, 0);
+            menuStrip_menu.Location = new System.Drawing.Point(93,-2);
             this.Size = new System.Drawing.Size(165, 115);
 
             CpuRate_panel.Hide();
@@ -93,22 +94,24 @@ namespace view
 
         private void Max_PicBox_MouseDown(object sender, MouseEventArgs e)
         {
-            Max_PicBox.BackColor = Color.Gainsboro;
+            Max_PicBox.BackgroundImage = Properties.Resources.maximize_click;
         }
 
         private void Max_PicBox_MouseEnter(object sender, EventArgs e)
         {
-            Max_PicBox.BackColor = Color.Silver;
+            Max_PicBox.BackgroundImage = Properties.Resources.maximize_enter;
         }
+
 
         private void Max_PicBox_MouseLeave(object sender, EventArgs e)
         {
-            Max_PicBox.BackColor = Color.Gray;
+            Max_PicBox.BackgroundImage = Properties.Resources.maximize;
         }
         int i=0;
 
         private void Max_PicBox_Click(object sender, EventArgs e)
         {
+            
             if (i % 2 == 0)
             {
                 this.Size = new System.Drawing.Size(189, 223);
@@ -120,6 +123,7 @@ namespace view
                 TitleBar.Size = new System.Drawing.Size(188, 20);
                 Exit_PicBox.Location = new System.Drawing.Point(168, 0);
                 Max_PicBox.Location = new System.Drawing.Point(148, 0);
+                menuStrip_menu.Location = new System.Drawing.Point(114, -2);
 
                 Hdd_label.Location = new System.Drawing.Point(-1, 121);
                 Hdd_Count_label.Location = new System.Drawing.Point(7, 149);
@@ -137,6 +141,7 @@ namespace view
                 TitleBar.Size = new System.Drawing.Size(165, 20);
                 Exit_PicBox.Location = new System.Drawing.Point(145, 0);
                 Max_PicBox.Location = new System.Drawing.Point(125, 0);
+                menuStrip_menu.Location = new System.Drawing.Point(93, -2);
                 this.Size = new System.Drawing.Size(165, 115);
 
                 CpuRate_panel.Hide();
@@ -161,6 +166,55 @@ namespace view
             Battery_Count_label.Text=mainviewController_obj.PowerCalculator()+" %";
         }
 
+        //double opacity;
+        private void opacity_10_Click(object sender, EventArgs e)
+        {
+            this.Opacity = .1;
+            //opacity = 0.1;
+        }
+
+        private void W8multiTool_mainView_MouseEnter(object sender, EventArgs e)
+        {
+            this.Opacity = 1;
+        }
+
+        private void W8multiTool_mainView_MouseLeave(object sender, EventArgs e)
+        {
+           
+            
+            //this.Opacity = opacity;
+        }
+
+        private void opacity_20_Click(object sender, EventArgs e)
+        {
+            this.Opacity = .2;
+        }
+
+        private void opacity_50_Click(object sender, EventArgs e)
+        {
+            this.Opacity = .5;
+        }
+
+        private void opacity_80_Click(object sender, EventArgs e)
+        {
+            this.Opacity = .8;
+        }
+
+        private void opacity_60_Click(object sender, EventArgs e)
+        {
+            this.Opacity = .6;
+        }
+
+        private void opacity_100_Click(object sender, EventArgs e)
+        {
+            this.Opacity = 1;
+        }
+
+   
+
+
+
+      
        
 
 

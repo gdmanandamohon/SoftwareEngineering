@@ -29,11 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.TitleBar = new System.Windows.Forms.Panel();
             this.Exit_PicBox = new System.Windows.Forms.PictureBox();
             this.Clock_Count_label = new System.Windows.Forms.Label();
             this.Max_PicBox = new System.Windows.Forms.PictureBox();
+            this.menuStrip_menu = new System.Windows.Forms.MenuStrip();
+            this.hiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_20 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_50 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_60 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_80 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_100 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alarrmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calanderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Battery_label = new System.Windows.Forms.Label();
             this.Battery_Count_label = new System.Windows.Forms.Label();
             this.Hdd_Count_label = new System.Windows.Forms.Label();
@@ -51,6 +63,7 @@
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
+            this.menuStrip_menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -65,6 +78,7 @@
             this.TitleBar.Controls.Add(this.Exit_PicBox);
             this.TitleBar.Controls.Add(this.Clock_Count_label);
             this.TitleBar.Controls.Add(this.Max_PicBox);
+            this.TitleBar.Controls.Add(this.menuStrip_menu);
             this.TitleBar.Location = new System.Drawing.Point(0, 0);
             this.TitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.TitleBar.Name = "TitleBar";
@@ -75,7 +89,7 @@
             // 
             // Exit_PicBox
             // 
-            this.Exit_PicBox.BackColor = System.Drawing.SystemColors.Control;
+            this.Exit_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Exit_PicBox.BackgroundImage = global::view.Properties.Resources.exit;
             this.Exit_PicBox.Location = new System.Drawing.Point(168, 0);
             this.Exit_PicBox.Margin = new System.Windows.Forms.Padding(2);
@@ -103,8 +117,8 @@
             // 
             // Max_PicBox
             // 
-            this.Max_PicBox.BackColor = System.Drawing.Color.Gray;
-            this.Max_PicBox.BackgroundImage = global::view.Properties.Resources.maximize;
+            this.Max_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Max_PicBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Max_PicBox.BackgroundImage")));
             this.Max_PicBox.Location = new System.Drawing.Point(148, 0);
             this.Max_PicBox.Margin = new System.Windows.Forms.Padding(2);
             this.Max_PicBox.Name = "Max_PicBox";
@@ -115,6 +129,96 @@
             this.Max_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Max_PicBox_MouseDown);
             this.Max_PicBox.MouseEnter += new System.EventHandler(this.Max_PicBox_MouseEnter);
             this.Max_PicBox.MouseLeave += new System.EventHandler(this.Max_PicBox_MouseLeave);
+            // 
+            // menuStrip_menu
+            // 
+            this.menuStrip_menu.AutoSize = false;
+            this.menuStrip_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menuStrip_menu.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hiToolStripMenuItem});
+            this.menuStrip_menu.Location = new System.Drawing.Point(107, -2);
+            this.menuStrip_menu.Name = "menuStrip_menu";
+            this.menuStrip_menu.Size = new System.Drawing.Size(81, 24);
+            this.menuStrip_menu.TabIndex = 34;
+            this.menuStrip_menu.Text = "menuStrip1";
+            // 
+            // hiToolStripMenuItem
+            // 
+            this.hiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opacityToolStripMenuItem,
+            this.alarrmToolStripMenuItem,
+            this.calanderToolStripMenuItem});
+            this.hiToolStripMenuItem.Image = global::view.Properties.Resources.menu;
+            this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
+            this.hiToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            // 
+            // opacityToolStripMenuItem
+            // 
+            this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opacity_10,
+            this.opacity_20,
+            this.opacity_50,
+            this.opacity_60,
+            this.opacity_80,
+            this.opacity_100});
+            this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.opacityToolStripMenuItem.Text = "Opacity";
+            // 
+            // opacity_10
+            // 
+            this.opacity_10.Name = "opacity_10";
+            this.opacity_10.Size = new System.Drawing.Size(92, 22);
+            this.opacity_10.Text = "10";
+            this.opacity_10.Click += new System.EventHandler(this.opacity_10_Click);
+            // 
+            // opacity_20
+            // 
+            this.opacity_20.Name = "opacity_20";
+            this.opacity_20.Size = new System.Drawing.Size(92, 22);
+            this.opacity_20.Text = "30";
+            this.opacity_20.Click += new System.EventHandler(this.opacity_20_Click);
+            // 
+            // opacity_50
+            // 
+            this.opacity_50.Name = "opacity_50";
+            this.opacity_50.Size = new System.Drawing.Size(92, 22);
+            this.opacity_50.Text = "50";
+            this.opacity_50.Click += new System.EventHandler(this.opacity_50_Click);
+            // 
+            // opacity_60
+            // 
+            this.opacity_60.Name = "opacity_60";
+            this.opacity_60.Size = new System.Drawing.Size(92, 22);
+            this.opacity_60.Text = "60";
+            this.opacity_60.Click += new System.EventHandler(this.opacity_60_Click);
+            // 
+            // opacity_80
+            // 
+            this.opacity_80.Name = "opacity_80";
+            this.opacity_80.Size = new System.Drawing.Size(92, 22);
+            this.opacity_80.Text = "80";
+            this.opacity_80.Click += new System.EventHandler(this.opacity_80_Click);
+            // 
+            // opacity_100
+            // 
+            this.opacity_100.Name = "opacity_100";
+            this.opacity_100.Size = new System.Drawing.Size(92, 22);
+            this.opacity_100.Text = "100";
+            this.opacity_100.Click += new System.EventHandler(this.opacity_100_Click);
+            // 
+            // alarrmToolStripMenuItem
+            // 
+            this.alarrmToolStripMenuItem.Name = "alarrmToolStripMenuItem";
+            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.alarrmToolStripMenuItem.Text = "Alarm";
+            // 
+            // calanderToolStripMenuItem
+            // 
+            this.calanderToolStripMenuItem.Name = "calanderToolStripMenuItem";
+            this.calanderToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.calanderToolStripMenuItem.Text = "Calander";
             // 
             // Battery_label
             // 
@@ -267,12 +371,18 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip_menu;
             this.Name = "W8multiTool_mainView";
             this.Text = "W8MultiTool";
+            this.MouseEnter += new System.EventHandler(this.W8multiTool_mainView_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.W8multiTool_mainView_MouseLeave);
+
             this.TitleBar.ResumeLayout(false);
             this.TitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).EndInit();
+            this.menuStrip_menu.ResumeLayout(false);
+            this.menuStrip_menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +409,17 @@
         private System.Windows.Forms.Panel CpuRate_panel;
         private System.Windows.Forms.Timer timer_w8_positioning;
         private System.Windows.Forms.Timer timer_PerformanceCounter;
+        private System.Windows.Forms.MenuStrip menuStrip_menu;
+        private System.Windows.Forms.ToolStripMenuItem hiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opacityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opacity_10;
+        private System.Windows.Forms.ToolStripMenuItem opacity_20;
+        private System.Windows.Forms.ToolStripMenuItem opacity_50;
+        private System.Windows.Forms.ToolStripMenuItem opacity_60;
+        private System.Windows.Forms.ToolStripMenuItem opacity_80;
+        private System.Windows.Forms.ToolStripMenuItem opacity_100;
+        private System.Windows.Forms.ToolStripMenuItem alarrmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calanderToolStripMenuItem;
     }
 }
 
