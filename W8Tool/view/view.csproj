@@ -98,6 +98,10 @@
       <Project>{1021de37-18c8-4b1a-b157-bfa87539d890}</Project>
       <Name>controller</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{361fc873-7f90-4d16-a6da-152ae439297a}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu.png" />
@@ -113,6 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\audio.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarmclock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

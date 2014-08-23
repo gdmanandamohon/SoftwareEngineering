@@ -31,3 +31,5 @@ C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin
 C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\controller.pdb
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\controller.dll
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\controller.pdb
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\Model.dll
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\Model.pdb
