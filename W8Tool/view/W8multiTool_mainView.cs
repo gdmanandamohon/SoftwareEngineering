@@ -20,6 +20,7 @@ namespace view
         {
             InitializeComponent();
             panel_alarmClock.Hide();
+           
             minimize_form();
         }
 
@@ -274,6 +275,7 @@ namespace view
 
                 this.Size = new System.Drawing.Size(189, 360);
                 panel_alarmClock.Show();
+                cCleaner_panel.Hide();
                 j++;
             }
             else
@@ -287,6 +289,43 @@ namespace view
         private void alarrmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        int k = 0;
+        private void CCleanerpictureBox_Click(object sender, EventArgs e)
+        {
+
+            if (k % 2 == 0)
+            {
+
+                this.Size = new System.Drawing.Size(189, 360);
+                cCleaner_panel.Show();
+                panel_alarmClock.Hide();
+                
+
+
+                k++;
+            }
+            else
+            {
+                maximize_form();
+                k++;
+            }
+
+        }
+
+        private void RunClean_button_Click(object sender, EventArgs e)
+        {
+            if (TempClean_checkBox.Checked)
+                mainviewController_obj.cleanTemp();
+            if (CeanP_Temp_checkBox.Checked)
+                mainviewController_obj.clean_PTemp();
+            if (CleanPrefetch_checkBox.Checked)
+                mainviewController_obj.cleanPrefetch();
+            if (TemporaryInternetFiles_checkBox.Checked)
+                mainviewController_obj.cleanTempInternetCach();
+            
+            
         }
 
 

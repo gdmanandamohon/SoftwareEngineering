@@ -71,7 +71,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.Alarm_picBox = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CCleanerpictureBox = new System.Windows.Forms.PictureBox();
+            this.cCleaner_panel = new System.Windows.Forms.Panel();
+            this.TempClean_checkBox = new System.Windows.Forms.CheckBox();
+            this.CeanP_Temp_checkBox = new System.Windows.Forms.CheckBox();
+            this.CleanPrefetch_checkBox = new System.Windows.Forms.CheckBox();
+            this.TemporaryInternetFiles_checkBox = new System.Windows.Forms.CheckBox();
+            this.RunClean_button = new System.Windows.Forms.Button();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
@@ -82,7 +88,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).BeginInit();
+            this.cCleaner_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -431,9 +438,9 @@
             this.panel_alarmClock.Controls.Add(this.Active);
             this.panel_alarmClock.Controls.Add(this.label1);
             this.panel_alarmClock.Controls.Add(this.Alarm_time);
-            this.panel_alarmClock.Location = new System.Drawing.Point(1, 267);
+            this.panel_alarmClock.Location = new System.Drawing.Point(0, 267);
             this.panel_alarmClock.Name = "panel_alarmClock";
-            this.panel_alarmClock.Size = new System.Drawing.Size(188, 89);
+            this.panel_alarmClock.Size = new System.Drawing.Size(190, 92);
             this.panel_alarmClock.TabIndex = 40;
             // 
             // options_panel
@@ -443,7 +450,7 @@
             this.options_panel.Controls.Add(this.pictureBox5);
             this.options_panel.Controls.Add(this.Alarm_picBox);
             this.options_panel.Controls.Add(this.pictureBox4);
-            this.options_panel.Controls.Add(this.pictureBox2);
+            this.options_panel.Controls.Add(this.CCleanerpictureBox);
             this.options_panel.Location = new System.Drawing.Point(4, 225);
             this.options_panel.Name = "options_panel";
             this.options_panel.Size = new System.Drawing.Size(181, 37);
@@ -452,7 +459,6 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.Location = new System.Drawing.Point(74, 4);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
@@ -463,7 +469,6 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.Location = new System.Drawing.Point(146, 4);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
@@ -486,7 +491,6 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.Location = new System.Drawing.Point(110, 4);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
@@ -494,16 +498,85 @@
             this.pictureBox4.TabIndex = 44;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox2
+            // CCleanerpictureBox
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(39, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
+            this.CCleanerpictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CCleanerpictureBox.BackgroundImage = global::view.Properties.Resources.CClean;
+            this.CCleanerpictureBox.InitialImage = null;
+            this.CCleanerpictureBox.Location = new System.Drawing.Point(39, 4);
+            this.CCleanerpictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CCleanerpictureBox.Name = "CCleanerpictureBox";
+            this.CCleanerpictureBox.Size = new System.Drawing.Size(30, 30);
+            this.CCleanerpictureBox.TabIndex = 42;
+            this.CCleanerpictureBox.TabStop = false;
+            this.CCleanerpictureBox.Click += new System.EventHandler(this.CCleanerpictureBox_Click);
+            // 
+            // cCleaner_panel
+            // 
+            this.cCleaner_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cCleaner_panel.Controls.Add(this.RunClean_button);
+            this.cCleaner_panel.Controls.Add(this.TemporaryInternetFiles_checkBox);
+            this.cCleaner_panel.Controls.Add(this.CleanPrefetch_checkBox);
+            this.cCleaner_panel.Controls.Add(this.CeanP_Temp_checkBox);
+            this.cCleaner_panel.Controls.Add(this.TempClean_checkBox);
+            this.cCleaner_panel.Location = new System.Drawing.Point(0, 268);
+            this.cCleaner_panel.Name = "cCleaner_panel";
+            this.cCleaner_panel.Size = new System.Drawing.Size(190, 92);
+            this.cCleaner_panel.TabIndex = 47;
+            // 
+            // TempClean_checkBox
+            // 
+            this.TempClean_checkBox.AutoSize = true;
+            this.TempClean_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempClean_checkBox.Location = new System.Drawing.Point(5, 4);
+            this.TempClean_checkBox.Name = "TempClean_checkBox";
+            this.TempClean_checkBox.Size = new System.Drawing.Size(77, 19);
+            this.TempClean_checkBox.TabIndex = 0;
+            this.TempClean_checkBox.Text = "Clean Temp";
+            this.TempClean_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // CeanP_Temp_checkBox
+            // 
+            this.CeanP_Temp_checkBox.AutoSize = true;
+            this.CeanP_Temp_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CeanP_Temp_checkBox.Location = new System.Drawing.Point(5, 22);
+            this.CeanP_Temp_checkBox.Name = "CeanP_Temp_checkBox";
+            this.CeanP_Temp_checkBox.Size = new System.Drawing.Size(95, 19);
+            this.CeanP_Temp_checkBox.TabIndex = 1;
+            this.CeanP_Temp_checkBox.Text = "Clean %TEMP%";
+            this.CeanP_Temp_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // CleanPrefetch_checkBox
+            // 
+            this.CleanPrefetch_checkBox.AutoSize = true;
+            this.CleanPrefetch_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CleanPrefetch_checkBox.Location = new System.Drawing.Point(5, 38);
+            this.CleanPrefetch_checkBox.Name = "CleanPrefetch_checkBox";
+            this.CleanPrefetch_checkBox.Size = new System.Drawing.Size(86, 19);
+            this.CleanPrefetch_checkBox.TabIndex = 2;
+            this.CleanPrefetch_checkBox.Text = "Clean Prefetch";
+            this.CleanPrefetch_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // TemporaryInternetFiles_checkBox
+            // 
+            this.TemporaryInternetFiles_checkBox.AutoSize = true;
+            this.TemporaryInternetFiles_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TemporaryInternetFiles_checkBox.Location = new System.Drawing.Point(5, 55);
+            this.TemporaryInternetFiles_checkBox.Name = "TemporaryInternetFiles_checkBox";
+            this.TemporaryInternetFiles_checkBox.Size = new System.Drawing.Size(127, 19);
+            this.TemporaryInternetFiles_checkBox.TabIndex = 3;
+            this.TemporaryInternetFiles_checkBox.Text = "Temporary Internet Files";
+            this.TemporaryInternetFiles_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // RunClean_button
+            // 
+            this.RunClean_button.Location = new System.Drawing.Point(139, 55);
+            this.RunClean_button.Name = "RunClean_button";
+            this.RunClean_button.Size = new System.Drawing.Size(46, 33);
+            this.RunClean_button.TabIndex = 4;
+            this.RunClean_button.Text = "Clean";
+            this.RunClean_button.UseVisualStyleBackColor = true;
+            this.RunClean_button.Click += new System.EventHandler(this.RunClean_button_Click);
             // 
             // W8multiTool_mainView
             // 
@@ -511,6 +584,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(190, 360);
+            this.Controls.Add(this.cCleaner_panel);
             this.Controls.Add(this.options_panel);
             this.Controls.Add(this.panel_alarmClock);
             this.Controls.Add(this.BatteryRate_panel);
@@ -545,7 +619,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).EndInit();
+            this.cCleaner_panel.ResumeLayout(false);
+            this.cCleaner_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -590,11 +666,17 @@
         private System.Windows.Forms.CheckBox audio_checkBox;
         private System.Windows.Forms.Panel panel_alarmClock;
         private System.Windows.Forms.PictureBox Alarm_picBox;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox CCleanerpictureBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel options_panel;
+        private System.Windows.Forms.Panel cCleaner_panel;
+        private System.Windows.Forms.CheckBox TemporaryInternetFiles_checkBox;
+        private System.Windows.Forms.CheckBox CleanPrefetch_checkBox;
+        private System.Windows.Forms.CheckBox CeanP_Temp_checkBox;
+        private System.Windows.Forms.CheckBox TempClean_checkBox;
+        private System.Windows.Forms.Button RunClean_button;
     }
 }
 
