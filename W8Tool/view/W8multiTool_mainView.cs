@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using controller;
+using System.Media;
 
 namespace view
 {
@@ -18,21 +19,8 @@ namespace view
         public W8multiTool_mainView()
         {
             InitializeComponent();
-
-            TitleBar.Size = new System.Drawing.Size(165, 20);
-            Exit_PicBox.Location = new System.Drawing.Point(145, 0);
-            Max_PicBox.Location = new System.Drawing.Point(125, 0);
-            menuStrip_menu.Location = new System.Drawing.Point(93,-2);
-            this.Size = new System.Drawing.Size(165, 115);
-
-            CpuRate_panel.Hide();
-            RamRate_panel.Hide();
-            HddRate_panel.Hide();
-
-            Hdd_label.Location = new System.Drawing.Point(92, 26);
-            Hdd_Count_label.Location = new System.Drawing.Point(97, 52);
-            Battery_label.Location = new System.Drawing.Point(92, 68);
-            Battery_Count_label.Location = new System.Drawing.Point(97, 96);
+            panel_alarmClock.Hide();
+            minimize_form();
         }
 
         Point formloc, curloc = new Point(0, 0);
@@ -63,9 +51,49 @@ namespace view
             timer_w8_positioning.Stop();
         }
 
+         SoundPlayer sp = new SoundPlayer();
+        //System.WMPLib.WindowsMediaPlayer Player;
         private void timer_clock_Tick(object sender, EventArgs e)
         {
-            Clock_Count_label.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            Clock_Count_label.Text = DateTime.Now.ToString("h:mm:ss tt");
+
+            if (isSetAlarm.Checked && Alarm_time.Text==Clock_Count_label.Text)
+            {
+
+                if (audio_checkBox.Checked)
+                {
+                    //WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
+                    //wplayer.URL = "My MP3 file.mp3";
+                    //wplayer.controls.play();
+                    sp.Stream=Properties.Resources.audio;
+                    //sp.SoundLocation = "D:\\1.wav";
+                    //sp.PlaySync();
+                    sp.Play();
+                    //MessageBox.Show("Alarm at " + Clock_Count_label.Text);
+
+                    isSetAlarm.Checked = false;
+                    if (MessageBox.Show("Alarm at " + Alarm_time.Text, "Alarm Clock", MessageBoxButtons.OK, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                    {
+                        sp.Stop();
+                    }
+                    Alarm_time.Text = "Not set Yet";
+                }
+             
+                    
+                   
+                /*else
+                {
+                    if (MessageBox.Show("Alarm at" + Clock_Count_label.Text, "Alarm Clock", MessageBoxButtons.OK) == DialogResult.OK)
+                    {
+                        MessageBox.Show("Alarm at" + Clock_Count_label.Text);
+                        isSetAlarm.Checked = false;
+                        Alarm_time.Text = "Not set Yet";
+                    }
+                }*/
+                    
+                
+            }
             
         }
 
@@ -114,22 +142,10 @@ namespace view
             
             if (i % 2 == 0)
             {
-                this.Size = new System.Drawing.Size(189, 223);
+               
                 i++;
-                CpuRate_panel.Show();
-                RamRate_panel.Show();
-                HddRate_panel.Show();
 
-                TitleBar.Size = new System.Drawing.Size(188, 20);
-                Exit_PicBox.Location = new System.Drawing.Point(168, 0);
-                Max_PicBox.Location = new System.Drawing.Point(148, 0);
-                menuStrip_menu.Location = new System.Drawing.Point(114, -2);
-
-                Hdd_label.Location = new System.Drawing.Point(-1, 121);
-                Hdd_Count_label.Location = new System.Drawing.Point(7, 149);
-                Battery_label.Location = new System.Drawing.Point(2, 173);
-                Battery_Count_label.Location = new System.Drawing.Point(9, 200);
-
+                maximize_form();
                 //Clock_label.Size = new System.Drawing.Size(113, 24);
                 //Clock_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12f, FontStyle.Bold);
             }
@@ -138,20 +154,7 @@ namespace view
             {
                 i++;
 
-                TitleBar.Size = new System.Drawing.Size(165, 20);
-                Exit_PicBox.Location = new System.Drawing.Point(145, 0);
-                Max_PicBox.Location = new System.Drawing.Point(125, 0);
-                menuStrip_menu.Location = new System.Drawing.Point(93, -2);
-                this.Size = new System.Drawing.Size(165, 115);
-
-                CpuRate_panel.Hide();
-                RamRate_panel.Hide();
-                HddRate_panel.Hide();
-
-                Hdd_label.Location = new System.Drawing.Point(92, 26);
-                Hdd_Count_label.Location = new System.Drawing.Point(97, 52);
-                Battery_label.Location = new System.Drawing.Point(92, 68);
-                Battery_Count_label.Location = new System.Drawing.Point(97, 96); ;
+                minimize_form();
 
 
                 //Clock_label.Size = new System.Drawing.Size(70, 25);
@@ -175,7 +178,7 @@ namespace view
 
         private void W8multiTool_mainView_MouseEnter(object sender, EventArgs e)
         {
-            this.Opacity = 1;
+           // this.Opacity = 1;
         }
 
         private void W8multiTool_mainView_MouseLeave(object sender, EventArgs e)
@@ -210,8 +213,81 @@ namespace view
             this.Opacity = 1;
         }
 
-   
 
+        public void minimize_form()
+        {
+            TitleBar.Size = new System.Drawing.Size(165, 20);
+            Exit_PicBox.Location = new System.Drawing.Point(145, 0);
+            Max_PicBox.Location = new System.Drawing.Point(125, 0);
+            menuStrip_menu.Location = new System.Drawing.Point(93, -2);
+            this.Size = new System.Drawing.Size(165, 115);
+
+            CpuRate_panel.Hide();
+            RamRate_panel.Hide();
+            HddRate_panel.Hide();
+
+            Hdd_label.Location = new System.Drawing.Point(92, 26);
+            Hdd_Count_label.Location = new System.Drawing.Point(97, 52);
+            Battery_label.Location = new System.Drawing.Point(92, 68);
+            Battery_Count_label.Location = new System.Drawing.Point(97, 96);
+        }
+
+
+        public void maximize_form()
+        {
+            this.Size = new System.Drawing.Size(189, 268);
+            
+            CpuRate_panel.Show();
+            RamRate_panel.Show();
+            HddRate_panel.Show();
+
+            TitleBar.Size = new System.Drawing.Size(188, 20);
+            Exit_PicBox.Location = new System.Drawing.Point(168, 0);
+            Max_PicBox.Location = new System.Drawing.Point(148, 0);
+            menuStrip_menu.Location = new System.Drawing.Point(114, -2);
+
+            Hdd_label.Location = new System.Drawing.Point(-1, 121);
+            Hdd_Count_label.Location = new System.Drawing.Point(7, 149);
+            Battery_label.Location = new System.Drawing.Point(2, 173);
+            Battery_Count_label.Location = new System.Drawing.Point(9, 200);
+        }
+
+        private void Active_Click(object sender, EventArgs e)
+        {
+            //maximize_form();
+            if (!isSetAlarm.Checked)
+            {
+                Alarm_time.Text = dateTimePicker.Text;
+                isSetAlarm.Checked = true;
+            }
+            maximize_form();
+            panel_alarmClock.Hide();
+            options_panel.Show();
+            
+        }
+
+        int j = 0;
+        private void Alarm_picBox_Click(object sender, EventArgs e)
+        {
+            if (j % 2 == 0)
+            {
+
+                this.Size = new System.Drawing.Size(189, 360);
+                panel_alarmClock.Show();
+                j++;
+            }
+            else
+            {
+                maximize_form();
+                j++;
+            }
+            
+        }
+
+        private void alarrmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
 
       

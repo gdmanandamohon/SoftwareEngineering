@@ -45,7 +45,6 @@
             this.opacity_80 = new System.Windows.Forms.ToolStripMenuItem();
             this.opacity_100 = new System.Windows.Forms.ToolStripMenuItem();
             this.alarrmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calanderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Battery_label = new System.Windows.Forms.Label();
             this.Battery_Count_label = new System.Windows.Forms.Label();
             this.Hdd_Count_label = new System.Windows.Forms.Label();
@@ -60,10 +59,30 @@
             this.CpuRate_panel = new System.Windows.Forms.Panel();
             this.timer_w8_positioning = new System.Windows.Forms.Timer(this.components);
             this.timer_PerformanceCounter = new System.Windows.Forms.Timer(this.components);
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.isSetAlarm = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Alarm_time = new System.Windows.Forms.Label();
+            this.Active = new System.Windows.Forms.Button();
+            this.audio_checkBox = new System.Windows.Forms.CheckBox();
+            this.panel_alarmClock = new System.Windows.Forms.Panel();
+            this.Alarm_picBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.options_panel = new System.Windows.Forms.Panel();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
             this.menuStrip_menu.SuspendLayout();
+            this.panel_alarmClock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.options_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -147,8 +166,7 @@
             // 
             this.hiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opacityToolStripMenuItem,
-            this.alarrmToolStripMenuItem,
-            this.calanderToolStripMenuItem});
+            this.alarrmToolStripMenuItem});
             this.hiToolStripMenuItem.Image = global::view.Properties.Resources.menu;
             this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
             this.hiToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
@@ -163,7 +181,7 @@
             this.opacity_80,
             this.opacity_100});
             this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
-            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.opacityToolStripMenuItem.Text = "Opacity";
             // 
             // opacity_10
@@ -211,14 +229,9 @@
             // alarrmToolStripMenuItem
             // 
             this.alarrmToolStripMenuItem.Name = "alarrmToolStripMenuItem";
-            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.alarrmToolStripMenuItem.Text = "Alarm";
-            // 
-            // calanderToolStripMenuItem
-            // 
-            this.calanderToolStripMenuItem.Name = "calanderToolStripMenuItem";
-            this.calanderToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.calanderToolStripMenuItem.Text = "Calander";
+            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alarrmToolStripMenuItem.Text = "Exit";
+            this.alarrmToolStripMenuItem.Click += new System.EventHandler(this.alarrmToolStripMenuItem_Click);
             // 
             // Battery_label
             // 
@@ -351,12 +364,155 @@
             this.timer_PerformanceCounter.Interval = 1000;
             this.timer_PerformanceCounter.Tick += new System.EventHandler(this.timer_PerformanceCounter_Tick);
             // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker.Location = new System.Drawing.Point(3, 8);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(98, 20);
+            this.dateTimePicker.TabIndex = 34;
+            // 
+            // isSetAlarm
+            // 
+            this.isSetAlarm.AutoSize = true;
+            this.isSetAlarm.Location = new System.Drawing.Point(111, 59);
+            this.isSetAlarm.Name = "isSetAlarm";
+            this.isSetAlarm.Size = new System.Drawing.Size(71, 17);
+            this.isSetAlarm.TabIndex = 35;
+            this.isSetAlarm.Text = "Set Alarm";
+            this.isSetAlarm.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Alarm Time :";
+            // 
+            // Alarm_time
+            // 
+            this.Alarm_time.AutoSize = true;
+            this.Alarm_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Alarm_time.Location = new System.Drawing.Point(3, 56);
+            this.Alarm_time.Name = "Alarm_time";
+            this.Alarm_time.Size = new System.Drawing.Size(92, 20);
+            this.Alarm_time.TabIndex = 37;
+            this.Alarm_time.Text = "Not Set Yet";
+            // 
+            // Active
+            // 
+            this.Active.Location = new System.Drawing.Point(111, 9);
+            this.Active.Name = "Active";
+            this.Active.Size = new System.Drawing.Size(75, 22);
+            this.Active.TabIndex = 38;
+            this.Active.Text = "Active";
+            this.Active.UseVisualStyleBackColor = true;
+            this.Active.Click += new System.EventHandler(this.Active_Click);
+            // 
+            // audio_checkBox
+            // 
+            this.audio_checkBox.AutoSize = true;
+            this.audio_checkBox.Location = new System.Drawing.Point(111, 35);
+            this.audio_checkBox.Name = "audio_checkBox";
+            this.audio_checkBox.Size = new System.Drawing.Size(53, 17);
+            this.audio_checkBox.TabIndex = 39;
+            this.audio_checkBox.Text = "Audio";
+            this.audio_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // panel_alarmClock
+            // 
+            this.panel_alarmClock.BackColor = System.Drawing.Color.Silver;
+            this.panel_alarmClock.Controls.Add(this.dateTimePicker);
+            this.panel_alarmClock.Controls.Add(this.audio_checkBox);
+            this.panel_alarmClock.Controls.Add(this.isSetAlarm);
+            this.panel_alarmClock.Controls.Add(this.Active);
+            this.panel_alarmClock.Controls.Add(this.label1);
+            this.panel_alarmClock.Controls.Add(this.Alarm_time);
+            this.panel_alarmClock.Location = new System.Drawing.Point(1, 267);
+            this.panel_alarmClock.Name = "panel_alarmClock";
+            this.panel_alarmClock.Size = new System.Drawing.Size(188, 89);
+            this.panel_alarmClock.TabIndex = 40;
+            // 
+            // Alarm_picBox
+            // 
+            this.Alarm_picBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Alarm_picBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Alarm_picBox.BackgroundImage")));
+            this.Alarm_picBox.Location = new System.Drawing.Point(2, 4);
+            this.Alarm_picBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Alarm_picBox.Name = "Alarm_picBox";
+            this.Alarm_picBox.Size = new System.Drawing.Size(30, 30);
+            this.Alarm_picBox.TabIndex = 41;
+            this.Alarm_picBox.TabStop = false;
+            this.Alarm_picBox.Click += new System.EventHandler(this.Alarm_picBox_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(39, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(74, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.TabIndex = 43;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.Location = new System.Drawing.Point(109, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 44;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(144, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.TabIndex = 45;
+            this.pictureBox5.TabStop = false;
+            // 
+            // options_panel
+            // 
+            this.options_panel.BackColor = System.Drawing.Color.DarkGray;
+            this.options_panel.Controls.Add(this.pictureBox3);
+            this.options_panel.Controls.Add(this.pictureBox5);
+            this.options_panel.Controls.Add(this.Alarm_picBox);
+            this.options_panel.Controls.Add(this.pictureBox4);
+            this.options_panel.Controls.Add(this.pictureBox2);
+            this.options_panel.Location = new System.Drawing.Point(7, 225);
+            this.options_panel.Name = "options_panel";
+            this.options_panel.Size = new System.Drawing.Size(177, 37);
+            this.options_panel.TabIndex = 46;
+            // 
             // W8multiTool_mainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(188, 223);
+            this.ClientSize = new System.Drawing.Size(190, 360);
+            this.Controls.Add(this.options_panel);
+            this.Controls.Add(this.panel_alarmClock);
             this.Controls.Add(this.BatteryRate_panel);
             this.Controls.Add(this.HddRate_panel);
             this.Controls.Add(this.RamRate_panel);
@@ -376,13 +532,20 @@
             this.Text = "W8MultiTool";
             this.MouseEnter += new System.EventHandler(this.W8multiTool_mainView_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.W8multiTool_mainView_MouseLeave);
-
             this.TitleBar.ResumeLayout(false);
             this.TitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).EndInit();
             this.menuStrip_menu.ResumeLayout(false);
             this.menuStrip_menu.PerformLayout();
+            this.panel_alarmClock.ResumeLayout(false);
+            this.panel_alarmClock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.options_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +582,19 @@
         private System.Windows.Forms.ToolStripMenuItem opacity_80;
         private System.Windows.Forms.ToolStripMenuItem opacity_100;
         private System.Windows.Forms.ToolStripMenuItem alarrmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem calanderToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.CheckBox isSetAlarm;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Alarm_time;
+        private System.Windows.Forms.Button Active;
+        private System.Windows.Forms.CheckBox audio_checkBox;
+        private System.Windows.Forms.Panel panel_alarmClock;
+        private System.Windows.Forms.PictureBox Alarm_picBox;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel options_panel;
     }
 }
 
