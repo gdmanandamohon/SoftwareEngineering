@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using controller;
 using System.Media;
+using System.Windows.Forms.DataVisualization.Charting;
+
 
 namespace view
 {
@@ -19,8 +21,10 @@ namespace view
         public W8multiTool_mainView()
         {
             InitializeComponent();
+            DrawToGraph1(50);
             panel_alarmClock.Hide();
-           
+            chart_map.Size = new System.Drawing.Size(305, 115);
+            chart_map.Location = new System.Drawing.Point(-20, 109);
             minimize_form();
         }
 
@@ -29,14 +33,14 @@ namespace view
         {
             formloc = this.Location;
             //
-            curloc = Cursor.Position;
+            curloc = System.Windows.Forms.Cursor.Position;
             //
         }
 
         private void timer_w8_positioning_Tick(object sender, EventArgs e)
         {
-            int exe = formloc.X - curloc.X + Cursor.Position.X;
-            int eye = formloc.Y - curloc.Y + Cursor.Position.Y;
+            int exe = formloc.X - curloc.X + System.Windows.Forms.Cursor.Position.X;
+            int eye = formloc.Y - curloc.Y + System.Windows.Forms.Cursor.Position.Y;
             this.Location = new Point(exe, eye);
         }
 
@@ -162,12 +166,20 @@ namespace view
                 //Clock_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f, FontStyle.Bold);
             }
         }
+
+        double x = 6;
         private void timer_PerformanceCounter_Tick(object sender, EventArgs e)
-        {        
-            Cpu_Count_label.Text = mainviewController_obj.ProcessorUsages()+" %";
+        {
+            int cpu_rate = mainviewController_obj.ProcessorUsages();
+            Cpu_Count_label.Text = cpu_rate.ToString() + " %";
             Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + " MB";
             Hdd_Count_label.Text = mainviewController_obj.DiskUsages()+" MB";
             Battery_Count_label.Text=mainviewController_obj.PowerCalculator()+" %";
+
+            DataPoint dp2 = new DataPoint(x, cpu_rate);
+            chart_map.Series["CPU"].Points.Add(dp2);
+            x++;
+            chart_map.Series["CPU"].Points.RemoveAt(0);
         }
 
         //double opacity;
@@ -223,10 +235,6 @@ namespace view
             menuStrip_menu.Location = new System.Drawing.Point(93, -2);
             this.Size = new System.Drawing.Size(165, 115);
 
-            CpuRate_panel.Hide();
-            RamRate_panel.Hide();
-            HddRate_panel.Hide();
-
             Hdd_label.Location = new System.Drawing.Point(92, 26);
             Hdd_Count_label.Location = new System.Drawing.Point(97, 52);
             Battery_label.Location = new System.Drawing.Point(92, 68);
@@ -237,20 +245,20 @@ namespace view
         public void maximize_form()
         {
             this.Size = new System.Drawing.Size(189, 268);
-            
-            CpuRate_panel.Show();
-            RamRate_panel.Show();
-            HddRate_panel.Show();
 
             TitleBar.Size = new System.Drawing.Size(188, 20);
             Exit_PicBox.Location = new System.Drawing.Point(168, 0);
             Max_PicBox.Location = new System.Drawing.Point(148, 0);
             menuStrip_menu.Location = new System.Drawing.Point(114, -2);
 
-            Hdd_label.Location = new System.Drawing.Point(-1, 121);
+            Hdd_label.Location = new System.Drawing.Point(103, 25);
+            Hdd_Count_label.Location = new System.Drawing.Point(107, 49);
+            Battery_label.Location = new System.Drawing.Point(106, 68);
+            Battery_Count_label.Location = new System.Drawing.Point(107, 93);
+           /* Hdd_label.Location = new System.Drawing.Point(-1, 121);
             Hdd_Count_label.Location = new System.Drawing.Point(7, 149);
             Battery_label.Location = new System.Drawing.Point(2, 173);
-            Battery_Count_label.Location = new System.Drawing.Point(9, 200);
+            Battery_Count_label.Location = new System.Drawing.Point(9, 200);*/
         }
 
         private void Active_Click(object sender, EventArgs e)
@@ -261,8 +269,8 @@ namespace view
                 Alarm_time.Text = dateTimePicker.Text;
                 isSetAlarm.Checked = true;
             }
-            maximize_form();
-            panel_alarmClock.Hide();
+           // maximize_form();
+            //panel_alarmClock.Hide();
             options_panel.Show();
             
         }
@@ -328,13 +336,37 @@ namespace view
             
         }
 
+        private void Alarm_picBox_MouseEnter(object sender, EventArgs e)
+        {
+            Alarm_picBox.BackColor = Color.DimGray ;
+        }
 
-      
-       
+        private void Alarm_picBox_MouseLeave(object sender, EventArgs e)
+        {
+            Alarm_picBox.BackColor = Color.Gray;
+        }
 
+        private void CCleanerpictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            CCleanerpictureBox.BackColor = Color.DimGray;
+        }
 
+        private void CCleanerpictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            CCleanerpictureBox.BackColor = Color.Gray;
+        }
+        Random ran = new Random();
+        private void DrawToGraph1(int X)
+        {
+            chart_map.Series[0].Points.Clear();
+            for (int g = 0; g <= 5; g++)
+            {
+                DataPoint dp = new DataPoint(g, X);
+                chart_map.Series["CPU"].Points.Add(dp);
+            }
+        }
         
-       
+
 
     }
 }

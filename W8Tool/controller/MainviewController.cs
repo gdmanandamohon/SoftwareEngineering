@@ -12,10 +12,10 @@ namespace controller
     {
         protected PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
 
-        public String ProcessorUsages()
+        public int ProcessorUsages()
         {        
             int processorUsage = (int)cpuCounter.NextValue();
-            return processorUsage.ToString();
+            return processorUsage;
         }
         
         public float MemoryUsage()

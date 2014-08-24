@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.TitleBar = new System.Windows.Forms.Panel();
             this.Exit_PicBox = new System.Windows.Forms.PictureBox();
@@ -53,10 +57,6 @@
             this.Ram_Count_label = new System.Windows.Forms.Label();
             this.Cpu_Count_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BatteryRate_panel = new System.Windows.Forms.Panel();
-            this.HddRate_panel = new System.Windows.Forms.Panel();
-            this.RamRate_panel = new System.Windows.Forms.Panel();
-            this.CpuRate_panel = new System.Windows.Forms.Panel();
             this.timer_w8_positioning = new System.Windows.Forms.Timer(this.components);
             this.timer_PerformanceCounter = new System.Windows.Forms.Timer(this.components);
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -73,11 +73,12 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.CCleanerpictureBox = new System.Windows.Forms.PictureBox();
             this.cCleaner_panel = new System.Windows.Forms.Panel();
-            this.TempClean_checkBox = new System.Windows.Forms.CheckBox();
-            this.CeanP_Temp_checkBox = new System.Windows.Forms.CheckBox();
-            this.CleanPrefetch_checkBox = new System.Windows.Forms.CheckBox();
-            this.TemporaryInternetFiles_checkBox = new System.Windows.Forms.CheckBox();
             this.RunClean_button = new System.Windows.Forms.Button();
+            this.TemporaryInternetFiles_checkBox = new System.Windows.Forms.CheckBox();
+            this.CleanPrefetch_checkBox = new System.Windows.Forms.CheckBox();
+            this.CeanP_Temp_checkBox = new System.Windows.Forms.CheckBox();
+            this.TempClean_checkBox = new System.Windows.Forms.CheckBox();
+            this.chart_map = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
@@ -90,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).BeginInit();
             this.cCleaner_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_map)).BeginInit();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -100,7 +102,7 @@
             // 
             // TitleBar
             // 
-            this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TitleBar.Controls.Add(this.Exit_PicBox);
             this.TitleBar.Controls.Add(this.Clock_Count_label);
             this.TitleBar.Controls.Add(this.Max_PicBox);
@@ -115,7 +117,7 @@
             // 
             // Exit_PicBox
             // 
-            this.Exit_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Exit_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Exit_PicBox.BackgroundImage = global::view.Properties.Resources.exit;
             this.Exit_PicBox.Location = new System.Drawing.Point(168, 0);
             this.Exit_PicBox.Margin = new System.Windows.Forms.Padding(2);
@@ -134,6 +136,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Clock_Count_label.AutoSize = true;
             this.Clock_Count_label.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock_Count_label.ForeColor = System.Drawing.Color.White;
             this.Clock_Count_label.Location = new System.Drawing.Point(-2, 0);
             this.Clock_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Clock_Count_label.Name = "Clock_Count_label";
@@ -143,7 +146,7 @@
             // 
             // Max_PicBox
             // 
-            this.Max_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Max_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Max_PicBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Max_PicBox.BackgroundImage")));
             this.Max_PicBox.Location = new System.Drawing.Point(148, 0);
             this.Max_PicBox.Margin = new System.Windows.Forms.Padding(2);
@@ -159,7 +162,7 @@
             // menuStrip_menu
             // 
             this.menuStrip_menu.AutoSize = false;
-            this.menuStrip_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menuStrip_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuStrip_menu.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip_menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hiToolStripMenuItem});
@@ -244,7 +247,7 @@
             // 
             this.Battery_label.AutoSize = true;
             this.Battery_label.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Battery_label.Location = new System.Drawing.Point(5, 168);
+            this.Battery_label.Location = new System.Drawing.Point(106, 68);
             this.Battery_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Battery_label.Name = "Battery_label";
             this.Battery_label.Size = new System.Drawing.Size(69, 20);
@@ -254,7 +257,8 @@
             // Battery_Count_label
             // 
             this.Battery_Count_label.AutoSize = true;
-            this.Battery_Count_label.Location = new System.Drawing.Point(12, 195);
+            this.Battery_Count_label.ForeColor = System.Drawing.Color.White;
+            this.Battery_Count_label.Location = new System.Drawing.Point(107, 93);
             this.Battery_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Battery_Count_label.Name = "Battery_Count_label";
             this.Battery_Count_label.Size = new System.Drawing.Size(39, 13);
@@ -264,7 +268,8 @@
             // Hdd_Count_label
             // 
             this.Hdd_Count_label.AutoSize = true;
-            this.Hdd_Count_label.Location = new System.Drawing.Point(10, 144);
+            this.Hdd_Count_label.ForeColor = System.Drawing.Color.White;
+            this.Hdd_Count_label.Location = new System.Drawing.Point(107, 49);
             this.Hdd_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Hdd_Count_label.Name = "Hdd_Count_label";
             this.Hdd_Count_label.Size = new System.Drawing.Size(25, 13);
@@ -275,7 +280,7 @@
             // 
             this.Hdd_label.AutoSize = true;
             this.Hdd_label.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hdd_label.Location = new System.Drawing.Point(2, 116);
+            this.Hdd_label.Location = new System.Drawing.Point(103, 25);
             this.Hdd_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Hdd_label.Name = "Hdd_label";
             this.Hdd_label.Size = new System.Drawing.Size(75, 20);
@@ -286,6 +291,7 @@
             // 
             this.Ram_label.AutoSize = true;
             this.Ram_label.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ram_label.ForeColor = System.Drawing.Color.Navy;
             this.Ram_label.Location = new System.Drawing.Point(0, 68);
             this.Ram_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Ram_label.Name = "Ram_label";
@@ -296,6 +302,7 @@
             // Ram_Count_label
             // 
             this.Ram_Count_label.AutoSize = true;
+            this.Ram_Count_label.ForeColor = System.Drawing.Color.White;
             this.Ram_Count_label.Location = new System.Drawing.Point(11, 93);
             this.Ram_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Ram_Count_label.Name = "Ram_Count_label";
@@ -306,6 +313,7 @@
             // Cpu_Count_label
             // 
             this.Cpu_Count_label.AutoSize = true;
+            this.Cpu_Count_label.ForeColor = System.Drawing.Color.White;
             this.Cpu_Count_label.Location = new System.Drawing.Point(11, 49);
             this.Cpu_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Cpu_Count_label.Name = "Cpu_Count_label";
@@ -317,48 +325,13 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(2, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "CPU RATE";
-            // 
-            // BatteryRate_panel
-            // 
-            this.BatteryRate_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BatteryRate_panel.Location = new System.Drawing.Point(76, 167);
-            this.BatteryRate_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.BatteryRate_panel.Name = "BatteryRate_panel";
-            this.BatteryRate_panel.Size = new System.Drawing.Size(112, 47);
-            this.BatteryRate_panel.TabIndex = 33;
-            // 
-            // HddRate_panel
-            // 
-            this.HddRate_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HddRate_panel.Location = new System.Drawing.Point(76, 115);
-            this.HddRate_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.HddRate_panel.Name = "HddRate_panel";
-            this.HddRate_panel.Size = new System.Drawing.Size(112, 47);
-            this.HddRate_panel.TabIndex = 31;
-            // 
-            // RamRate_panel
-            // 
-            this.RamRate_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RamRate_panel.Location = new System.Drawing.Point(76, 67);
-            this.RamRate_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.RamRate_panel.Name = "RamRate_panel";
-            this.RamRate_panel.Size = new System.Drawing.Size(112, 45);
-            this.RamRate_panel.TabIndex = 32;
-            // 
-            // CpuRate_panel
-            // 
-            this.CpuRate_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CpuRate_panel.Location = new System.Drawing.Point(76, 24);
-            this.CpuRate_panel.Margin = new System.Windows.Forms.Padding(2);
-            this.CpuRate_panel.Name = "CpuRate_panel";
-            this.CpuRate_panel.Size = new System.Drawing.Size(112, 40);
-            this.CpuRate_panel.TabIndex = 30;
             // 
             // timer_w8_positioning
             // 
@@ -382,6 +355,7 @@
             // isSetAlarm
             // 
             this.isSetAlarm.AutoSize = true;
+            this.isSetAlarm.ForeColor = System.Drawing.Color.White;
             this.isSetAlarm.Location = new System.Drawing.Point(111, 59);
             this.isSetAlarm.Name = "isSetAlarm";
             this.isSetAlarm.Size = new System.Drawing.Size(71, 17);
@@ -393,6 +367,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(2, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 20);
@@ -403,6 +378,7 @@
             // 
             this.Alarm_time.AutoSize = true;
             this.Alarm_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Alarm_time.ForeColor = System.Drawing.Color.White;
             this.Alarm_time.Location = new System.Drawing.Point(3, 56);
             this.Alarm_time.Name = "Alarm_time";
             this.Alarm_time.Size = new System.Drawing.Size(92, 20);
@@ -422,6 +398,7 @@
             // audio_checkBox
             // 
             this.audio_checkBox.AutoSize = true;
+            this.audio_checkBox.ForeColor = System.Drawing.Color.White;
             this.audio_checkBox.Location = new System.Drawing.Point(111, 35);
             this.audio_checkBox.Name = "audio_checkBox";
             this.audio_checkBox.Size = new System.Drawing.Size(53, 17);
@@ -487,6 +464,8 @@
             this.Alarm_picBox.TabIndex = 41;
             this.Alarm_picBox.TabStop = false;
             this.Alarm_picBox.Click += new System.EventHandler(this.Alarm_picBox_Click);
+            this.Alarm_picBox.MouseEnter += new System.EventHandler(this.Alarm_picBox_MouseEnter);
+            this.Alarm_picBox.MouseLeave += new System.EventHandler(this.Alarm_picBox_MouseLeave);
             // 
             // pictureBox4
             // 
@@ -510,63 +489,21 @@
             this.CCleanerpictureBox.TabIndex = 42;
             this.CCleanerpictureBox.TabStop = false;
             this.CCleanerpictureBox.Click += new System.EventHandler(this.CCleanerpictureBox_Click);
+            this.CCleanerpictureBox.MouseEnter += new System.EventHandler(this.CCleanerpictureBox_MouseEnter);
+            this.CCleanerpictureBox.MouseLeave += new System.EventHandler(this.CCleanerpictureBox_MouseLeave);
             // 
             // cCleaner_panel
             // 
-            this.cCleaner_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cCleaner_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cCleaner_panel.Controls.Add(this.RunClean_button);
             this.cCleaner_panel.Controls.Add(this.TemporaryInternetFiles_checkBox);
             this.cCleaner_panel.Controls.Add(this.CleanPrefetch_checkBox);
             this.cCleaner_panel.Controls.Add(this.CeanP_Temp_checkBox);
             this.cCleaner_panel.Controls.Add(this.TempClean_checkBox);
-            this.cCleaner_panel.Location = new System.Drawing.Point(0, 268);
+            this.cCleaner_panel.Location = new System.Drawing.Point(0, 267);
             this.cCleaner_panel.Name = "cCleaner_panel";
             this.cCleaner_panel.Size = new System.Drawing.Size(190, 92);
             this.cCleaner_panel.TabIndex = 47;
-            // 
-            // TempClean_checkBox
-            // 
-            this.TempClean_checkBox.AutoSize = true;
-            this.TempClean_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TempClean_checkBox.Location = new System.Drawing.Point(5, 4);
-            this.TempClean_checkBox.Name = "TempClean_checkBox";
-            this.TempClean_checkBox.Size = new System.Drawing.Size(77, 19);
-            this.TempClean_checkBox.TabIndex = 0;
-            this.TempClean_checkBox.Text = "Clean Temp";
-            this.TempClean_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // CeanP_Temp_checkBox
-            // 
-            this.CeanP_Temp_checkBox.AutoSize = true;
-            this.CeanP_Temp_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CeanP_Temp_checkBox.Location = new System.Drawing.Point(5, 22);
-            this.CeanP_Temp_checkBox.Name = "CeanP_Temp_checkBox";
-            this.CeanP_Temp_checkBox.Size = new System.Drawing.Size(95, 19);
-            this.CeanP_Temp_checkBox.TabIndex = 1;
-            this.CeanP_Temp_checkBox.Text = "Clean %TEMP%";
-            this.CeanP_Temp_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // CleanPrefetch_checkBox
-            // 
-            this.CleanPrefetch_checkBox.AutoSize = true;
-            this.CleanPrefetch_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CleanPrefetch_checkBox.Location = new System.Drawing.Point(5, 38);
-            this.CleanPrefetch_checkBox.Name = "CleanPrefetch_checkBox";
-            this.CleanPrefetch_checkBox.Size = new System.Drawing.Size(86, 19);
-            this.CleanPrefetch_checkBox.TabIndex = 2;
-            this.CleanPrefetch_checkBox.Text = "Clean Prefetch";
-            this.CleanPrefetch_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // TemporaryInternetFiles_checkBox
-            // 
-            this.TemporaryInternetFiles_checkBox.AutoSize = true;
-            this.TemporaryInternetFiles_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TemporaryInternetFiles_checkBox.Location = new System.Drawing.Point(5, 55);
-            this.TemporaryInternetFiles_checkBox.Name = "TemporaryInternetFiles_checkBox";
-            this.TemporaryInternetFiles_checkBox.Size = new System.Drawing.Size(127, 19);
-            this.TemporaryInternetFiles_checkBox.TabIndex = 3;
-            this.TemporaryInternetFiles_checkBox.Text = "Temporary Internet Files";
-            this.TemporaryInternetFiles_checkBox.UseVisualStyleBackColor = true;
             // 
             // RunClean_button
             // 
@@ -578,19 +515,98 @@
             this.RunClean_button.UseVisualStyleBackColor = true;
             this.RunClean_button.Click += new System.EventHandler(this.RunClean_button_Click);
             // 
+            // TemporaryInternetFiles_checkBox
+            // 
+            this.TemporaryInternetFiles_checkBox.AutoSize = true;
+            this.TemporaryInternetFiles_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TemporaryInternetFiles_checkBox.ForeColor = System.Drawing.Color.White;
+            this.TemporaryInternetFiles_checkBox.Location = new System.Drawing.Point(5, 55);
+            this.TemporaryInternetFiles_checkBox.Name = "TemporaryInternetFiles_checkBox";
+            this.TemporaryInternetFiles_checkBox.Size = new System.Drawing.Size(127, 19);
+            this.TemporaryInternetFiles_checkBox.TabIndex = 3;
+            this.TemporaryInternetFiles_checkBox.Text = "Temporary Internet Files";
+            this.TemporaryInternetFiles_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // CleanPrefetch_checkBox
+            // 
+            this.CleanPrefetch_checkBox.AutoSize = true;
+            this.CleanPrefetch_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CleanPrefetch_checkBox.ForeColor = System.Drawing.Color.White;
+            this.CleanPrefetch_checkBox.Location = new System.Drawing.Point(5, 38);
+            this.CleanPrefetch_checkBox.Name = "CleanPrefetch_checkBox";
+            this.CleanPrefetch_checkBox.Size = new System.Drawing.Size(86, 19);
+            this.CleanPrefetch_checkBox.TabIndex = 2;
+            this.CleanPrefetch_checkBox.Text = "Clean Prefetch";
+            this.CleanPrefetch_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // CeanP_Temp_checkBox
+            // 
+            this.CeanP_Temp_checkBox.AutoSize = true;
+            this.CeanP_Temp_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CeanP_Temp_checkBox.ForeColor = System.Drawing.Color.White;
+            this.CeanP_Temp_checkBox.Location = new System.Drawing.Point(5, 22);
+            this.CeanP_Temp_checkBox.Name = "CeanP_Temp_checkBox";
+            this.CeanP_Temp_checkBox.Size = new System.Drawing.Size(95, 19);
+            this.CeanP_Temp_checkBox.TabIndex = 1;
+            this.CeanP_Temp_checkBox.Text = "Clean %TEMP%";
+            this.CeanP_Temp_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // TempClean_checkBox
+            // 
+            this.TempClean_checkBox.AutoSize = true;
+            this.TempClean_checkBox.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TempClean_checkBox.ForeColor = System.Drawing.Color.White;
+            this.TempClean_checkBox.Location = new System.Drawing.Point(5, 4);
+            this.TempClean_checkBox.Name = "TempClean_checkBox";
+            this.TempClean_checkBox.Size = new System.Drawing.Size(77, 19);
+            this.TempClean_checkBox.TabIndex = 0;
+            this.TempClean_checkBox.Text = "Clean Temp";
+            this.TempClean_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // chart_map
+            // 
+            this.chart_map.AntiAliasing = System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles.None;
+            this.chart_map.BackColor = System.Drawing.Color.Gray;
+            this.chart_map.BorderlineColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chart_map.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_map.Legends.Add(legend2);
+            this.chart_map.Location = new System.Drawing.Point(-20, 109);
+            this.chart_map.Name = "chart_map";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series3.Color = System.Drawing.Color.Red;
+            series3.IsXValueIndexed = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series3.Name = "CPU";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Navy;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.MarkerColor = System.Drawing.Color.Lime;
+            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
+            series4.Name = "RAM";
+            this.chart_map.Series.Add(series3);
+            this.chart_map.Series.Add(series4);
+            this.chart_map.Size = new System.Drawing.Size(305, 115);
+            this.chart_map.TabIndex = 48;
+            this.chart_map.Text = "chart1";
+            // 
             // W8multiTool_mainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(190, 360);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(187, 360);
+            this.Controls.Add(this.chart_map);
             this.Controls.Add(this.cCleaner_panel);
             this.Controls.Add(this.options_panel);
             this.Controls.Add(this.panel_alarmClock);
-            this.Controls.Add(this.BatteryRate_panel);
-            this.Controls.Add(this.HddRate_panel);
-            this.Controls.Add(this.RamRate_panel);
-            this.Controls.Add(this.CpuRate_panel);
             this.Controls.Add(this.Battery_label);
             this.Controls.Add(this.Battery_Count_label);
             this.Controls.Add(this.Hdd_Count_label);
@@ -622,6 +638,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).EndInit();
             this.cCleaner_panel.ResumeLayout(false);
             this.cCleaner_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_map)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,10 +659,6 @@
         private System.Windows.Forms.Label Ram_Count_label;
         private System.Windows.Forms.Label Cpu_Count_label;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel BatteryRate_panel;
-        private System.Windows.Forms.Panel HddRate_panel;
-        private System.Windows.Forms.Panel RamRate_panel;
-        private System.Windows.Forms.Panel CpuRate_panel;
         private System.Windows.Forms.Timer timer_w8_positioning;
         private System.Windows.Forms.Timer timer_PerformanceCounter;
         private System.Windows.Forms.MenuStrip menuStrip_menu;
@@ -677,6 +690,7 @@
         private System.Windows.Forms.CheckBox CeanP_Temp_checkBox;
         private System.Windows.Forms.CheckBox TempClean_checkBox;
         private System.Windows.Forms.Button RunClean_button;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_map;
     }
 }
 
