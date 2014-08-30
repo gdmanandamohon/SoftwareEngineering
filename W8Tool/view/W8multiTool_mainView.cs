@@ -421,13 +421,45 @@ namespace view
             }
         }
 
+        VideoMediaplayer videomp = new VideoMediaplayer();
+        int count_toggle = 0;
         private void videoplayer_pictureBox_Click(object sender, EventArgs e)
         {
-            VideoMediaplayer videomp=new VideoMediaplayer();
-            videomp.Show();
-        }
-        
+            if (count_toggle % 2 == 0)
+            {
+                videomp.Show();
+                count_toggle++;
+            }
 
+
+            else
+            {
+                videomp.Hide();
+                count_toggle++;
+            }
+                
+            
+        }
+
+        private void WMP_pictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            WMP_pictureBox.BackColor = Color.DimGray;
+        }
+
+        private void WMP_pictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            WMP_pictureBox.BackColor = Color.Gray;
+        }
+
+        private void videoplayer_pictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            videoplayer_pictureBox.BackColor = Color.DimGray;
+        }
+
+        private void videoplayer_pictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            videoplayer_pictureBox.BackColor = Color.Gray;
+        }
 
     }
 }
