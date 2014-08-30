@@ -71,6 +71,32 @@ namespace view
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog fopen = new OpenFileDialog();
+            fopen.Title = "Open File";
+            fopen.Filter = "files mp4 |*.mp4 |files AVI |*.avi |files MKV |*.mkv |files 3GP |*.3gp |files VOB |*.VOB | All files |*.*";
+            fopen.FilterIndex = 1;
+
+            try
+            {
+                if (fopen.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    axWindowsMediaPlayer1.URL = (fopen.FileName);
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

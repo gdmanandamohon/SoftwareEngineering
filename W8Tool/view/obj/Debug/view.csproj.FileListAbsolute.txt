@@ -51,3 +51,9 @@ C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\vi
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\Interop.WMPLib.dll
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.VideoMediaplayer.resources
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\Interop.WMPLib.dll
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.csproj.ResolveComReference.cache
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\Interop.WMPLib.dll
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\view\obj\Debug\view.VideoMediaplayer.resources

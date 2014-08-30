@@ -276,22 +276,22 @@ namespace view
             
         }
 
-        int j = 0;
+        int panel_alarmClock_togle = 0;
         private void Alarm_picBox_Click(object sender, EventArgs e)
         {
-            if (j % 2 == 0)
+            if (panel_alarmClock_togle % 2 == 0)
             {
 
                 this.Size = new System.Drawing.Size(189, 360);
                 WMP_panel.Hide();
                 panel_alarmClock.Show();
                 cCleaner_panel.Hide();
-                j++;
+                panel_alarmClock_togle++;
             }
             else
             {
                 maximize_form();
-                j++;
+                panel_alarmClock_togle++;
             }
             
         }
@@ -301,11 +301,11 @@ namespace view
             Application.Exit();
         }
 
-        int k = 0;
+        int cCleaner_panel_toggle = 0;
         private void CCleanerpictureBox_Click(object sender, EventArgs e)
         {
 
-            if (k % 2 == 0)
+            if (cCleaner_panel_toggle % 2 == 0)
             {
 
                 this.Size = new System.Drawing.Size(189, 360);
@@ -314,12 +314,12 @@ namespace view
                 WMP_panel.Hide();
 
 
-                k++;
+                cCleaner_panel_toggle++;
             }
             else
             {
                 maximize_form();
-                k++;
+                cCleaner_panel_toggle++;
             }
 
         }

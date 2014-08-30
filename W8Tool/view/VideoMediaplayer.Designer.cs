@@ -32,22 +32,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideoMediaplayer));
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_menubar = new System.Windows.Forms.Panel();
-            this.timer_move = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox_Exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox_Maximize = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox_Minimize = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Maximize = new System.Windows.Forms.PictureBox();
             this.menuStrip_titleBar = new System.Windows.Forms.MenuStrip();
             this.fILEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Exit = new System.Windows.Forms.PictureBox();
+            this.timer_move = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.panel_menubar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Maximize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).BeginInit();
-            this.menuStrip_titleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Maximize)).BeginInit();
+            this.menuStrip_titleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
@@ -59,8 +59,9 @@
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 23);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(285, 243);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(282, 226);
             this.axWindowsMediaPlayer1.TabIndex = 0;
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
             // panel_menubar
             // 
@@ -79,32 +80,15 @@
             this.panel_menubar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_menubar_MouseDown);
             this.panel_menubar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_menubar_MouseUp);
             // 
-            // timer_move
+            // pictureBox1
             // 
-            this.timer_move.Interval = 1;
-            this.timer_move.Tick += new System.EventHandler(this.timer_move_Tick);
-            // 
-            // pictureBox_Exit
-            // 
-            this.pictureBox_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_Exit.BackColor = System.Drawing.Color.Red;
-            this.pictureBox_Exit.Location = new System.Drawing.Point(263, 2);
-            this.pictureBox_Exit.Name = "pictureBox_Exit";
-            this.pictureBox_Exit.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox_Exit.TabIndex = 2;
-            this.pictureBox_Exit.TabStop = false;
-            this.pictureBox_Exit.Click += new System.EventHandler(this.pictureBox_Exit_Click);
-            // 
-            // pictureBox_Maximize
-            // 
-            this.pictureBox_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_Maximize.BackColor = System.Drawing.Color.Red;
-            this.pictureBox_Maximize.Location = new System.Drawing.Point(242, 2);
-            this.pictureBox_Maximize.Name = "pictureBox_Maximize";
-            this.pictureBox_Maximize.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox_Maximize.TabIndex = 3;
-            this.pictureBox_Maximize.TabStop = false;
-            this.pictureBox_Maximize.Click += new System.EventHandler(this.pictureBox_Maximize_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox_Minimize
             // 
@@ -116,6 +100,17 @@
             this.pictureBox_Minimize.TabIndex = 4;
             this.pictureBox_Minimize.TabStop = false;
             this.pictureBox_Minimize.Click += new System.EventHandler(this.pictureBox_Minimize_Click);
+            // 
+            // pictureBox_Maximize
+            // 
+            this.pictureBox_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_Maximize.BackColor = System.Drawing.Color.Red;
+            this.pictureBox_Maximize.Location = new System.Drawing.Point(242, 2);
+            this.pictureBox_Maximize.Name = "pictureBox_Maximize";
+            this.pictureBox_Maximize.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox_Maximize.TabIndex = 3;
+            this.pictureBox_Maximize.TabStop = false;
+            this.pictureBox_Maximize.Click += new System.EventHandler(this.pictureBox_Maximize_Click);
             // 
             // menuStrip_titleBar
             // 
@@ -144,6 +139,7 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -151,14 +147,21 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
-            // pictureBox1
+            // pictureBox_Exit
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox1.Location = new System.Drawing.Point(6, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_Exit.BackColor = System.Drawing.Color.Red;
+            this.pictureBox_Exit.Location = new System.Drawing.Point(263, 2);
+            this.pictureBox_Exit.Name = "pictureBox_Exit";
+            this.pictureBox_Exit.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox_Exit.TabIndex = 2;
+            this.pictureBox_Exit.TabStop = false;
+            this.pictureBox_Exit.Click += new System.EventHandler(this.pictureBox_Exit_Click);
+            // 
+            // timer_move
+            // 
+            this.timer_move.Interval = 1;
+            this.timer_move.Tick += new System.EventHandler(this.timer_move_Tick);
             // 
             // VideoMediaplayer
             // 
@@ -173,12 +176,12 @@
             this.Text = "VideoMediaplayer";
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.panel_menubar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Maximize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Maximize)).EndInit();
             this.menuStrip_titleBar.ResumeLayout(false);
             this.menuStrip_titleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Exit)).EndInit();
             this.ResumeLayout(false);
 
         }
