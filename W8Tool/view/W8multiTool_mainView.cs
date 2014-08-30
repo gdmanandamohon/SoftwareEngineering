@@ -18,6 +18,7 @@ namespace view
     public partial class W8multiTool_mainView : Form
     {
         MainviewController mainviewController_obj = new MainviewController();
+        CCleanerClass cclass = new CCleanerClass();
         public W8multiTool_mainView()
         {
             InitializeComponent();
@@ -325,13 +326,13 @@ namespace view
         private void RunClean_button_Click(object sender, EventArgs e)
         {
             if (TempClean_checkBox.Checked)
-                mainviewController_obj.cleanTemp();
+                cclass.cleanTemp();
             if (CeanP_Temp_checkBox.Checked)
-                mainviewController_obj.clean_PTemp();
+                cclass.clean_PTemp();
             if (CleanPrefetch_checkBox.Checked)
-                mainviewController_obj.cleanPrefetch();
+                cclass.cleanPrefetch();
             if (TemporaryInternetFiles_checkBox.Checked)
-                mainviewController_obj.cleanTempInternetCach();
+                cclass.cleanTempInternetCach();
             
             
         }

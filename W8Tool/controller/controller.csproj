@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CCleanerClass.cs" />
     <Compile Include="MainviewController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
