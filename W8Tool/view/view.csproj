@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VideoMediaplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoMediaplayer.Designer.cs">
+      <DependentUpon>VideoMediaplayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="W8multiTool_mainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +59,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VideoMediaplayer.resx">
+      <DependentUpon>VideoMediaplayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="W8multiTool_mainView.resx">
       <DependentUpon>W8multiTool_mainView.cs</DependentUpon>
     </EmbeddedResource>

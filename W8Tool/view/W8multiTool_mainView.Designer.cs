@@ -29,26 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.TitleBar = new System.Windows.Forms.Panel();
-            this.Exit_PicBox = new System.Windows.Forms.PictureBox();
             this.Clock_Count_label = new System.Windows.Forms.Label();
-            this.Max_PicBox = new System.Windows.Forms.PictureBox();
             this.menuStrip_menu = new System.Windows.Forms.MenuStrip();
-            this.hiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_20 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_50 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_60 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_80 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_100 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alarrmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Battery_label = new System.Windows.Forms.Label();
             this.Battery_Count_label = new System.Windows.Forms.Label();
             this.Hdd_Count_label = new System.Windows.Forms.Label();
@@ -67,11 +56,6 @@
             this.audio_checkBox = new System.Windows.Forms.CheckBox();
             this.panel_alarmClock = new System.Windows.Forms.Panel();
             this.options_panel = new System.Windows.Forms.Panel();
-            this.WMP_pictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.Alarm_picBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.CCleanerpictureBox = new System.Windows.Forms.PictureBox();
             this.cCleaner_panel = new System.Windows.Forms.Panel();
             this.RunClean_button = new System.Windows.Forms.Button();
             this.TemporaryInternetFiles_checkBox = new System.Windows.Forms.CheckBox();
@@ -80,24 +64,40 @@
             this.TempClean_checkBox = new System.Windows.Forms.CheckBox();
             this.chart_map = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.WMP_panel = new System.Windows.Forms.Panel();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.audioopen_button = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.WMP_pictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Alarm_picBox = new System.Windows.Forms.PictureBox();
+            this.videoplayer_pictureBox = new System.Windows.Forms.PictureBox();
+            this.CCleanerpictureBox = new System.Windows.Forms.PictureBox();
+            this.Exit_PicBox = new System.Windows.Forms.PictureBox();
+            this.Max_PicBox = new System.Windows.Forms.PictureBox();
+            this.hiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_20 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_50 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_60 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_80 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_100 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alarrmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
             this.menuStrip_menu.SuspendLayout();
             this.panel_alarmClock.SuspendLayout();
             this.options_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).BeginInit();
             this.cCleaner_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_map)).BeginInit();
             this.WMP_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoplayer_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -121,21 +121,6 @@
             this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
             this.TitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseUp);
             // 
-            // Exit_PicBox
-            // 
-            this.Exit_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Exit_PicBox.BackgroundImage = global::view.Properties.Resources.exit;
-            this.Exit_PicBox.Location = new System.Drawing.Point(168, 0);
-            this.Exit_PicBox.Margin = new System.Windows.Forms.Padding(2);
-            this.Exit_PicBox.Name = "Exit_PicBox";
-            this.Exit_PicBox.Size = new System.Drawing.Size(20, 20);
-            this.Exit_PicBox.TabIndex = 10;
-            this.Exit_PicBox.TabStop = false;
-            this.Exit_PicBox.Click += new System.EventHandler(this.Exit_PicBox_Click);
-            this.Exit_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Exit_PicBox_MouseDown);
-            this.Exit_PicBox.MouseEnter += new System.EventHandler(this.Exit_PicBox_MouseEnter);
-            this.Exit_PicBox.MouseLeave += new System.EventHandler(this.Exit_PicBox_MouseLeave);
-            // 
             // Clock_Count_label
             // 
             this.Clock_Count_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -150,21 +135,6 @@
             this.Clock_Count_label.TabIndex = 1;
             this.Clock_Count_label.Text = "CLOCK TIME";
             // 
-            // Max_PicBox
-            // 
-            this.Max_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Max_PicBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Max_PicBox.BackgroundImage")));
-            this.Max_PicBox.Location = new System.Drawing.Point(148, 0);
-            this.Max_PicBox.Margin = new System.Windows.Forms.Padding(2);
-            this.Max_PicBox.Name = "Max_PicBox";
-            this.Max_PicBox.Size = new System.Drawing.Size(20, 20);
-            this.Max_PicBox.TabIndex = 9;
-            this.Max_PicBox.TabStop = false;
-            this.Max_PicBox.Click += new System.EventHandler(this.Max_PicBox_Click);
-            this.Max_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Max_PicBox_MouseDown);
-            this.Max_PicBox.MouseEnter += new System.EventHandler(this.Max_PicBox_MouseEnter);
-            this.Max_PicBox.MouseLeave += new System.EventHandler(this.Max_PicBox_MouseLeave);
-            // 
             // menuStrip_menu
             // 
             this.menuStrip_menu.AutoSize = false;
@@ -177,77 +147,6 @@
             this.menuStrip_menu.Size = new System.Drawing.Size(81, 24);
             this.menuStrip_menu.TabIndex = 34;
             this.menuStrip_menu.Text = "menuStrip1";
-            // 
-            // hiToolStripMenuItem
-            // 
-            this.hiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opacityToolStripMenuItem,
-            this.alarrmToolStripMenuItem});
-            this.hiToolStripMenuItem.Image = global::view.Properties.Resources.menu;
-            this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
-            this.hiToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
-            // 
-            // opacityToolStripMenuItem
-            // 
-            this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opacity_10,
-            this.opacity_20,
-            this.opacity_50,
-            this.opacity_60,
-            this.opacity_80,
-            this.opacity_100});
-            this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
-            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.opacityToolStripMenuItem.Text = "Opacity";
-            // 
-            // opacity_10
-            // 
-            this.opacity_10.Name = "opacity_10";
-            this.opacity_10.Size = new System.Drawing.Size(92, 22);
-            this.opacity_10.Text = "10";
-            this.opacity_10.Click += new System.EventHandler(this.opacity_10_Click);
-            // 
-            // opacity_20
-            // 
-            this.opacity_20.Name = "opacity_20";
-            this.opacity_20.Size = new System.Drawing.Size(92, 22);
-            this.opacity_20.Text = "30";
-            this.opacity_20.Click += new System.EventHandler(this.opacity_20_Click);
-            // 
-            // opacity_50
-            // 
-            this.opacity_50.Name = "opacity_50";
-            this.opacity_50.Size = new System.Drawing.Size(92, 22);
-            this.opacity_50.Text = "50";
-            this.opacity_50.Click += new System.EventHandler(this.opacity_50_Click);
-            // 
-            // opacity_60
-            // 
-            this.opacity_60.Name = "opacity_60";
-            this.opacity_60.Size = new System.Drawing.Size(92, 22);
-            this.opacity_60.Text = "60";
-            this.opacity_60.Click += new System.EventHandler(this.opacity_60_Click);
-            // 
-            // opacity_80
-            // 
-            this.opacity_80.Name = "opacity_80";
-            this.opacity_80.Size = new System.Drawing.Size(92, 22);
-            this.opacity_80.Text = "80";
-            this.opacity_80.Click += new System.EventHandler(this.opacity_80_Click);
-            // 
-            // opacity_100
-            // 
-            this.opacity_100.Name = "opacity_100";
-            this.opacity_100.Size = new System.Drawing.Size(92, 22);
-            this.opacity_100.Text = "100";
-            this.opacity_100.Click += new System.EventHandler(this.opacity_100_Click);
-            // 
-            // alarrmToolStripMenuItem
-            // 
-            this.alarrmToolStripMenuItem.Name = "alarrmToolStripMenuItem";
-            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.alarrmToolStripMenuItem.Text = "Exit";
-            this.alarrmToolStripMenuItem.Click += new System.EventHandler(this.alarrmToolStripMenuItem_Click);
             // 
             // Battery_label
             // 
@@ -432,73 +331,12 @@
             this.options_panel.Controls.Add(this.WMP_pictureBox);
             this.options_panel.Controls.Add(this.pictureBox5);
             this.options_panel.Controls.Add(this.Alarm_picBox);
-            this.options_panel.Controls.Add(this.pictureBox4);
+            this.options_panel.Controls.Add(this.videoplayer_pictureBox);
             this.options_panel.Controls.Add(this.CCleanerpictureBox);
             this.options_panel.Location = new System.Drawing.Point(4, 225);
             this.options_panel.Name = "options_panel";
             this.options_panel.Size = new System.Drawing.Size(181, 37);
             this.options_panel.TabIndex = 46;
-            // 
-            // WMP_pictureBox
-            // 
-            this.WMP_pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.WMP_pictureBox.BackgroundImage = global::view.Properties.Resources.media_player;
-            this.WMP_pictureBox.Location = new System.Drawing.Point(74, 4);
-            this.WMP_pictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.WMP_pictureBox.Name = "WMP_pictureBox";
-            this.WMP_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.WMP_pictureBox.TabIndex = 43;
-            this.WMP_pictureBox.TabStop = false;
-            this.WMP_pictureBox.Click += new System.EventHandler(this.WMP_pictureBox_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox5.Location = new System.Drawing.Point(146, 4);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.TabIndex = 45;
-            this.pictureBox5.TabStop = false;
-            // 
-            // Alarm_picBox
-            // 
-            this.Alarm_picBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Alarm_picBox.BackgroundImage = global::view.Properties.Resources.alarmclock;
-            this.Alarm_picBox.Location = new System.Drawing.Point(4, 4);
-            this.Alarm_picBox.Margin = new System.Windows.Forms.Padding(2);
-            this.Alarm_picBox.Name = "Alarm_picBox";
-            this.Alarm_picBox.Size = new System.Drawing.Size(30, 30);
-            this.Alarm_picBox.TabIndex = 41;
-            this.Alarm_picBox.TabStop = false;
-            this.Alarm_picBox.Click += new System.EventHandler(this.Alarm_picBox_Click);
-            this.Alarm_picBox.MouseEnter += new System.EventHandler(this.Alarm_picBox_MouseEnter);
-            this.Alarm_picBox.MouseLeave += new System.EventHandler(this.Alarm_picBox_MouseLeave);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox4.Location = new System.Drawing.Point(110, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.TabIndex = 44;
-            this.pictureBox4.TabStop = false;
-            // 
-            // CCleanerpictureBox
-            // 
-            this.CCleanerpictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CCleanerpictureBox.BackgroundImage = global::view.Properties.Resources.CClean;
-            this.CCleanerpictureBox.InitialImage = null;
-            this.CCleanerpictureBox.Location = new System.Drawing.Point(39, 4);
-            this.CCleanerpictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.CCleanerpictureBox.Name = "CCleanerpictureBox";
-            this.CCleanerpictureBox.Size = new System.Drawing.Size(30, 30);
-            this.CCleanerpictureBox.TabIndex = 42;
-            this.CCleanerpictureBox.TabStop = false;
-            this.CCleanerpictureBox.Click += new System.EventHandler(this.CCleanerpictureBox_Click);
-            this.CCleanerpictureBox.MouseEnter += new System.EventHandler(this.CCleanerpictureBox_MouseEnter);
-            this.CCleanerpictureBox.MouseLeave += new System.EventHandler(this.CCleanerpictureBox_MouseLeave);
             // 
             // cCleaner_panel
             // 
@@ -577,31 +415,31 @@
             this.chart_map.AntiAliasing = System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles.None;
             this.chart_map.BackColor = System.Drawing.Color.Gray;
             this.chart_map.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea4.Name = "ChartArea1";
-            this.chart_map.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart_map.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.chart_map.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_map.Legends.Add(legend1);
             this.chart_map.Location = new System.Drawing.Point(-20, 109);
             this.chart_map.Name = "chart_map";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series7.Color = System.Drawing.Color.Red;
-            series7.IsXValueIndexed = true;
-            series7.LabelForeColor = System.Drawing.Color.White;
-            series7.Legend = "Legend1";
-            series7.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series7.Name = "CPU";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Color = System.Drawing.Color.Navy;
-            series8.LabelForeColor = System.Drawing.Color.White;
-            series8.Legend = "Legend1";
-            series8.MarkerColor = System.Drawing.Color.Lime;
-            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
-            series8.Name = "RAM";
-            this.chart_map.Series.Add(series7);
-            this.chart_map.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Color = System.Drawing.Color.Red;
+            series1.IsXValueIndexed = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series1.Name = "CPU";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Navy;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.MarkerColor = System.Drawing.Color.Lime;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
+            series2.Name = "RAM";
+            this.chart_map.Series.Add(series1);
+            this.chart_map.Series.Add(series2);
             this.chart_map.Size = new System.Drawing.Size(305, 115);
             this.chart_map.TabIndex = 48;
             this.chart_map.Text = "chart1";
@@ -616,20 +454,6 @@
             this.WMP_panel.Size = new System.Drawing.Size(190, 94);
             this.WMP_panel.TabIndex = 49;
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 21);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(190, 71);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // audioopen_button
             // 
             this.audioopen_button.Location = new System.Drawing.Point(-3, -1);
@@ -639,6 +463,184 @@
             this.audioopen_button.Text = "Open";
             this.audioopen_button.UseVisualStyleBackColor = true;
             this.audioopen_button.Click += new System.EventHandler(this.audioopen_button_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 21);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(190, 71);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            // 
+            // WMP_pictureBox
+            // 
+            this.WMP_pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.WMP_pictureBox.BackgroundImage = global::view.Properties.Resources.media_player;
+            this.WMP_pictureBox.Location = new System.Drawing.Point(74, 4);
+            this.WMP_pictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.WMP_pictureBox.Name = "WMP_pictureBox";
+            this.WMP_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.WMP_pictureBox.TabIndex = 43;
+            this.WMP_pictureBox.TabStop = false;
+            this.WMP_pictureBox.Click += new System.EventHandler(this.WMP_pictureBox_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox5.Location = new System.Drawing.Point(146, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.TabIndex = 45;
+            this.pictureBox5.TabStop = false;
+            // 
+            // Alarm_picBox
+            // 
+            this.Alarm_picBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Alarm_picBox.BackgroundImage = global::view.Properties.Resources.alarmclock;
+            this.Alarm_picBox.Location = new System.Drawing.Point(4, 4);
+            this.Alarm_picBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Alarm_picBox.Name = "Alarm_picBox";
+            this.Alarm_picBox.Size = new System.Drawing.Size(30, 30);
+            this.Alarm_picBox.TabIndex = 41;
+            this.Alarm_picBox.TabStop = false;
+            this.Alarm_picBox.Click += new System.EventHandler(this.Alarm_picBox_Click);
+            this.Alarm_picBox.MouseEnter += new System.EventHandler(this.Alarm_picBox_MouseEnter);
+            this.Alarm_picBox.MouseLeave += new System.EventHandler(this.Alarm_picBox_MouseLeave);
+            // 
+            // videoplayer_pictureBox
+            // 
+            this.videoplayer_pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.videoplayer_pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoplayer_pictureBox.BackgroundImage")));
+            this.videoplayer_pictureBox.Location = new System.Drawing.Point(110, 4);
+            this.videoplayer_pictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.videoplayer_pictureBox.Name = "videoplayer_pictureBox";
+            this.videoplayer_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.videoplayer_pictureBox.TabIndex = 44;
+            this.videoplayer_pictureBox.TabStop = false;
+            this.videoplayer_pictureBox.Click += new System.EventHandler(this.videoplayer_pictureBox_Click);
+            // 
+            // CCleanerpictureBox
+            // 
+            this.CCleanerpictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CCleanerpictureBox.BackgroundImage = global::view.Properties.Resources.CClean;
+            this.CCleanerpictureBox.InitialImage = null;
+            this.CCleanerpictureBox.Location = new System.Drawing.Point(39, 4);
+            this.CCleanerpictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CCleanerpictureBox.Name = "CCleanerpictureBox";
+            this.CCleanerpictureBox.Size = new System.Drawing.Size(30, 30);
+            this.CCleanerpictureBox.TabIndex = 42;
+            this.CCleanerpictureBox.TabStop = false;
+            this.CCleanerpictureBox.Click += new System.EventHandler(this.CCleanerpictureBox_Click);
+            this.CCleanerpictureBox.MouseEnter += new System.EventHandler(this.CCleanerpictureBox_MouseEnter);
+            this.CCleanerpictureBox.MouseLeave += new System.EventHandler(this.CCleanerpictureBox_MouseLeave);
+            // 
+            // Exit_PicBox
+            // 
+            this.Exit_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Exit_PicBox.BackgroundImage = global::view.Properties.Resources.exit;
+            this.Exit_PicBox.Location = new System.Drawing.Point(168, 0);
+            this.Exit_PicBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Exit_PicBox.Name = "Exit_PicBox";
+            this.Exit_PicBox.Size = new System.Drawing.Size(20, 20);
+            this.Exit_PicBox.TabIndex = 10;
+            this.Exit_PicBox.TabStop = false;
+            this.Exit_PicBox.Click += new System.EventHandler(this.Exit_PicBox_Click);
+            this.Exit_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Exit_PicBox_MouseDown);
+            this.Exit_PicBox.MouseEnter += new System.EventHandler(this.Exit_PicBox_MouseEnter);
+            this.Exit_PicBox.MouseLeave += new System.EventHandler(this.Exit_PicBox_MouseLeave);
+            // 
+            // Max_PicBox
+            // 
+            this.Max_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Max_PicBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Max_PicBox.BackgroundImage")));
+            this.Max_PicBox.Location = new System.Drawing.Point(148, 0);
+            this.Max_PicBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Max_PicBox.Name = "Max_PicBox";
+            this.Max_PicBox.Size = new System.Drawing.Size(20, 20);
+            this.Max_PicBox.TabIndex = 9;
+            this.Max_PicBox.TabStop = false;
+            this.Max_PicBox.Click += new System.EventHandler(this.Max_PicBox_Click);
+            this.Max_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Max_PicBox_MouseDown);
+            this.Max_PicBox.MouseEnter += new System.EventHandler(this.Max_PicBox_MouseEnter);
+            this.Max_PicBox.MouseLeave += new System.EventHandler(this.Max_PicBox_MouseLeave);
+            // 
+            // hiToolStripMenuItem
+            // 
+            this.hiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opacityToolStripMenuItem,
+            this.alarrmToolStripMenuItem});
+            this.hiToolStripMenuItem.Image = global::view.Properties.Resources.menu;
+            this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
+            this.hiToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            // 
+            // opacityToolStripMenuItem
+            // 
+            this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opacity_10,
+            this.opacity_20,
+            this.opacity_50,
+            this.opacity_60,
+            this.opacity_80,
+            this.opacity_100});
+            this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.opacityToolStripMenuItem.Text = "Opacity";
+            // 
+            // opacity_10
+            // 
+            this.opacity_10.Name = "opacity_10";
+            this.opacity_10.Size = new System.Drawing.Size(92, 22);
+            this.opacity_10.Text = "10";
+            this.opacity_10.Click += new System.EventHandler(this.opacity_10_Click);
+            // 
+            // opacity_20
+            // 
+            this.opacity_20.Name = "opacity_20";
+            this.opacity_20.Size = new System.Drawing.Size(92, 22);
+            this.opacity_20.Text = "30";
+            this.opacity_20.Click += new System.EventHandler(this.opacity_20_Click);
+            // 
+            // opacity_50
+            // 
+            this.opacity_50.Name = "opacity_50";
+            this.opacity_50.Size = new System.Drawing.Size(92, 22);
+            this.opacity_50.Text = "50";
+            this.opacity_50.Click += new System.EventHandler(this.opacity_50_Click);
+            // 
+            // opacity_60
+            // 
+            this.opacity_60.Name = "opacity_60";
+            this.opacity_60.Size = new System.Drawing.Size(92, 22);
+            this.opacity_60.Text = "60";
+            this.opacity_60.Click += new System.EventHandler(this.opacity_60_Click);
+            // 
+            // opacity_80
+            // 
+            this.opacity_80.Name = "opacity_80";
+            this.opacity_80.Size = new System.Drawing.Size(92, 22);
+            this.opacity_80.Text = "80";
+            this.opacity_80.Click += new System.EventHandler(this.opacity_80_Click);
+            // 
+            // opacity_100
+            // 
+            this.opacity_100.Name = "opacity_100";
+            this.opacity_100.Size = new System.Drawing.Size(92, 22);
+            this.opacity_100.Text = "100";
+            this.opacity_100.Click += new System.EventHandler(this.opacity_100_Click);
+            // 
+            // alarrmToolStripMenuItem
+            // 
+            this.alarrmToolStripMenuItem.Name = "alarrmToolStripMenuItem";
+            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.alarrmToolStripMenuItem.Text = "Exit";
+            this.alarrmToolStripMenuItem.Click += new System.EventHandler(this.alarrmToolStripMenuItem_Click);
             // 
             // W8multiTool_mainView
             // 
@@ -668,23 +670,23 @@
             this.MouseLeave += new System.EventHandler(this.W8multiTool_mainView_MouseLeave);
             this.TitleBar.ResumeLayout(false);
             this.TitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).EndInit();
             this.menuStrip_menu.ResumeLayout(false);
             this.menuStrip_menu.PerformLayout();
             this.panel_alarmClock.ResumeLayout(false);
             this.panel_alarmClock.PerformLayout();
             this.options_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).EndInit();
             this.cCleaner_panel.ResumeLayout(false);
             this.cCleaner_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_map)).EndInit();
             this.WMP_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoplayer_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,7 +729,7 @@
         private System.Windows.Forms.PictureBox Alarm_picBox;
         private System.Windows.Forms.PictureBox CCleanerpictureBox;
         private System.Windows.Forms.PictureBox WMP_pictureBox;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox videoplayer_pictureBox;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel options_panel;
         private System.Windows.Forms.Panel cCleaner_panel;

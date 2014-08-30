@@ -420,6 +420,12 @@ namespace view
                 return;
             }
         }
+
+        private void videoplayer_pictureBox_Click(object sender, EventArgs e)
+        {
+            VideoMediaplayer videomp=new VideoMediaplayer();
+            videomp.Show();
+        }
         
 
 
