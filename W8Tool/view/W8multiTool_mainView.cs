@@ -283,6 +283,7 @@ namespace view
             {
 
                 this.Size = new System.Drawing.Size(189, 360);
+                WMP_panel.Hide();
                 panel_alarmClock.Show();
                 cCleaner_panel.Hide();
                 j++;
@@ -310,7 +311,7 @@ namespace view
                 this.Size = new System.Drawing.Size(189, 360);
                 cCleaner_panel.Show();
                 panel_alarmClock.Hide();
-                
+                WMP_panel.Hide();
 
 
                 k++;
@@ -364,6 +365,59 @@ namespace view
             {
                 DataPoint dp = new DataPoint(g, X);
                 chart_map.Series["CPU"].Points.Add(dp);
+            }
+        }
+
+        private void cCleaner_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        int indextoggel=0;
+        private void WMP_pictureBox_Click(object sender, EventArgs e)
+        {
+
+
+            if (indextoggel % 2 == 0)
+            {
+
+                this.Size = new System.Drawing.Size(189, 360);
+                cCleaner_panel.Hide();
+                panel_alarmClock.Hide();
+                WMP_panel.Show();
+
+
+                indextoggel++;
+            }
+            else
+            {
+                maximize_form();
+                indextoggel++;
+            }
+        }
+
+        private void openaudio_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void audioopen_button_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog fopen = new OpenFileDialog();
+            fopen.Title = "Open File";
+            fopen.Filter = "files Mp3 |*.mp3 |files MPEG |*.m4a |files WMA |*.wma |files WAV |*.wav";
+            fopen.FilterIndex = 1;
+
+            try
+            {
+                if (fopen.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    axWindowsMediaPlayer1.URL = (fopen.FileName);
+                }
+            }
+            catch (Exception)
+            {
+                return;
             }
         }
         

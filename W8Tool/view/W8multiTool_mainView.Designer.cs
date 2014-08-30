@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.TitleBar = new System.Windows.Forms.Panel();
             this.Exit_PicBox = new System.Windows.Forms.PictureBox();
@@ -67,7 +67,7 @@
             this.audio_checkBox = new System.Windows.Forms.CheckBox();
             this.panel_alarmClock = new System.Windows.Forms.Panel();
             this.options_panel = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.WMP_pictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.Alarm_picBox = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -79,19 +79,25 @@
             this.CeanP_Temp_checkBox = new System.Windows.Forms.CheckBox();
             this.TempClean_checkBox = new System.Windows.Forms.CheckBox();
             this.chart_map = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.WMP_panel = new System.Windows.Forms.Panel();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.audioopen_button = new System.Windows.Forms.Button();
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
             this.menuStrip_menu.SuspendLayout();
             this.panel_alarmClock.SuspendLayout();
             this.options_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).BeginInit();
             this.cCleaner_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_map)).BeginInit();
+            this.WMP_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -423,7 +429,7 @@
             // options_panel
             // 
             this.options_panel.BackColor = System.Drawing.Color.Gainsboro;
-            this.options_panel.Controls.Add(this.pictureBox3);
+            this.options_panel.Controls.Add(this.WMP_pictureBox);
             this.options_panel.Controls.Add(this.pictureBox5);
             this.options_panel.Controls.Add(this.Alarm_picBox);
             this.options_panel.Controls.Add(this.pictureBox4);
@@ -433,15 +439,17 @@
             this.options_panel.Size = new System.Drawing.Size(181, 37);
             this.options_panel.TabIndex = 46;
             // 
-            // pictureBox3
+            // WMP_pictureBox
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox3.Location = new System.Drawing.Point(74, 4);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.TabIndex = 43;
-            this.pictureBox3.TabStop = false;
+            this.WMP_pictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.WMP_pictureBox.BackgroundImage = global::view.Properties.Resources.media_player;
+            this.WMP_pictureBox.Location = new System.Drawing.Point(74, 4);
+            this.WMP_pictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.WMP_pictureBox.Name = "WMP_pictureBox";
+            this.WMP_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.WMP_pictureBox.TabIndex = 43;
+            this.WMP_pictureBox.TabStop = false;
+            this.WMP_pictureBox.Click += new System.EventHandler(this.WMP_pictureBox_Click);
             // 
             // pictureBox5
             // 
@@ -504,6 +512,7 @@
             this.cCleaner_panel.Name = "cCleaner_panel";
             this.cCleaner_panel.Size = new System.Drawing.Size(190, 92);
             this.cCleaner_panel.TabIndex = 47;
+            this.cCleaner_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.cCleaner_panel_Paint);
             // 
             // RunClean_button
             // 
@@ -568,34 +577,68 @@
             this.chart_map.AntiAliasing = System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles.None;
             this.chart_map.BackColor = System.Drawing.Color.Gray;
             this.chart_map.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart_map.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_map.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart_map.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart_map.Legends.Add(legend4);
             this.chart_map.Location = new System.Drawing.Point(-20, 109);
             this.chart_map.Name = "chart_map";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series3.Color = System.Drawing.Color.Red;
-            series3.IsXValueIndexed = true;
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series3.Name = "CPU";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Navy;
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.MarkerColor = System.Drawing.Color.Lime;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
-            series4.Name = "RAM";
-            this.chart_map.Series.Add(series3);
-            this.chart_map.Series.Add(series4);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series7.Color = System.Drawing.Color.Red;
+            series7.IsXValueIndexed = true;
+            series7.LabelForeColor = System.Drawing.Color.White;
+            series7.Legend = "Legend1";
+            series7.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series7.Name = "CPU";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Color = System.Drawing.Color.Navy;
+            series8.LabelForeColor = System.Drawing.Color.White;
+            series8.Legend = "Legend1";
+            series8.MarkerColor = System.Drawing.Color.Lime;
+            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
+            series8.Name = "RAM";
+            this.chart_map.Series.Add(series7);
+            this.chart_map.Series.Add(series8);
             this.chart_map.Size = new System.Drawing.Size(305, 115);
             this.chart_map.TabIndex = 48;
             this.chart_map.Text = "chart1";
+            // 
+            // WMP_panel
+            // 
+            this.WMP_panel.BackColor = System.Drawing.Color.Black;
+            this.WMP_panel.Controls.Add(this.audioopen_button);
+            this.WMP_panel.Controls.Add(this.axWindowsMediaPlayer1);
+            this.WMP_panel.Location = new System.Drawing.Point(0, 268);
+            this.WMP_panel.Name = "WMP_panel";
+            this.WMP_panel.Size = new System.Drawing.Size(190, 94);
+            this.WMP_panel.TabIndex = 49;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 21);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(190, 71);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // audioopen_button
+            // 
+            this.audioopen_button.Location = new System.Drawing.Point(-3, -1);
+            this.audioopen_button.Name = "audioopen_button";
+            this.audioopen_button.Size = new System.Drawing.Size(52, 23);
+            this.audioopen_button.TabIndex = 1;
+            this.audioopen_button.Text = "Open";
+            this.audioopen_button.UseVisualStyleBackColor = true;
+            this.audioopen_button.Click += new System.EventHandler(this.audioopen_button_Click);
             // 
             // W8multiTool_mainView
             // 
@@ -603,6 +646,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(187, 360);
+            this.Controls.Add(this.WMP_panel);
             this.Controls.Add(this.chart_map);
             this.Controls.Add(this.cCleaner_panel);
             this.Controls.Add(this.options_panel);
@@ -631,7 +675,7 @@
             this.panel_alarmClock.ResumeLayout(false);
             this.panel_alarmClock.PerformLayout();
             this.options_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -639,6 +683,8 @@
             this.cCleaner_panel.ResumeLayout(false);
             this.cCleaner_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_map)).EndInit();
+            this.WMP_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,7 +726,7 @@
         private System.Windows.Forms.Panel panel_alarmClock;
         private System.Windows.Forms.PictureBox Alarm_picBox;
         private System.Windows.Forms.PictureBox CCleanerpictureBox;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox WMP_pictureBox;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel options_panel;
@@ -691,6 +737,10 @@
         private System.Windows.Forms.CheckBox TempClean_checkBox;
         private System.Windows.Forms.Button RunClean_button;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_map;
+        private System.Windows.Forms.Panel WMP_panel;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button audioopen_button;
     }
 }
 
