@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.TitleBar = new System.Windows.Forms.Panel();
             this.Exit_PicBox = new System.Windows.Forms.PictureBox();
@@ -197,7 +197,7 @@
             this.opacity_80,
             this.opacity_100});
             this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
-            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.opacityToolStripMenuItem.Text = "Opacity";
             // 
             // opacity_10
@@ -245,7 +245,7 @@
             // alarrmToolStripMenuItem
             // 
             this.alarrmToolStripMenuItem.Name = "alarrmToolStripMenuItem";
-            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.alarrmToolStripMenuItem.Text = "Exit";
             this.alarrmToolStripMenuItem.Click += new System.EventHandler(this.alarrmToolStripMenuItem_Click);
             // 
@@ -254,7 +254,7 @@
             this.Battery_label.AutoSize = true;
             this.Battery_label.BackColor = System.Drawing.Color.Transparent;
             this.Battery_label.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Battery_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Battery_label.ForeColor = System.Drawing.Color.Green;
             this.Battery_label.Location = new System.Drawing.Point(106, 68);
             this.Battery_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Battery_label.Name = "Battery_label";
@@ -267,7 +267,7 @@
             this.Battery_Count_label.AutoSize = true;
             this.Battery_Count_label.BackColor = System.Drawing.Color.Transparent;
             this.Battery_Count_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Battery_Count_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Battery_Count_label.ForeColor = System.Drawing.Color.White;
             this.Battery_Count_label.Location = new System.Drawing.Point(107, 93);
             this.Battery_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Battery_Count_label.Name = "Battery_Count_label";
@@ -279,7 +279,7 @@
             // 
             this.Hdd_Count_label.AutoSize = true;
             this.Hdd_Count_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hdd_Count_label.ForeColor = System.Drawing.Color.Black;
+            this.Hdd_Count_label.ForeColor = System.Drawing.Color.White;
             this.Hdd_Count_label.Location = new System.Drawing.Point(107, 49);
             this.Hdd_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Hdd_Count_label.Name = "Hdd_Count_label";
@@ -314,7 +314,7 @@
             // 
             this.Ram_Count_label.AutoSize = true;
             this.Ram_Count_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ram_Count_label.ForeColor = System.Drawing.Color.Navy;
+            this.Ram_Count_label.ForeColor = System.Drawing.Color.White;
             this.Ram_Count_label.Location = new System.Drawing.Point(11, 93);
             this.Ram_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Ram_Count_label.Name = "Ram_Count_label";
@@ -326,7 +326,7 @@
             // 
             this.Cpu_Count_label.AutoSize = true;
             this.Cpu_Count_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cpu_Count_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Cpu_Count_label.ForeColor = System.Drawing.Color.White;
             this.Cpu_Count_label.Location = new System.Drawing.Point(11, 49);
             this.Cpu_Count_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Cpu_Count_label.Name = "Cpu_Count_label";
@@ -338,7 +338,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(2, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -592,31 +592,32 @@
             this.chart_map.AntiAliasing = System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles.None;
             this.chart_map.BackColor = System.Drawing.Color.Gray;
             this.chart_map.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea2.Name = "ChartArea1";
-            this.chart_map.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart_map.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart_map.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_map.Legends.Add(legend1);
             this.chart_map.Location = new System.Drawing.Point(-20, 109);
             this.chart_map.Name = "chart_map";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series3.Color = System.Drawing.Color.Red;
-            series3.IsXValueIndexed = true;
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series3.Name = "CPU";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Color = System.Drawing.Color.Navy;
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.MarkerColor = System.Drawing.Color.Lime;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
-            series4.Name = "RAM";
-            this.chart_map.Series.Add(series3);
-            this.chart_map.Series.Add(series4);
+            this.chart_map.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Color = System.Drawing.Color.Red;
+            series1.IsXValueIndexed = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series1.Name = "CPU";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.Navy;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.MarkerColor = System.Drawing.Color.Lime;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
+            series2.Name = "RAM";
+            this.chart_map.Series.Add(series1);
+            this.chart_map.Series.Add(series2);
             this.chart_map.Size = new System.Drawing.Size(305, 115);
             this.chart_map.TabIndex = 48;
             this.chart_map.Text = "chart1";
