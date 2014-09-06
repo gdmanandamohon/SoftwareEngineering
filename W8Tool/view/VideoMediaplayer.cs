@@ -64,7 +64,12 @@ namespace view
 
         private void pictureBox_Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Disposed = true;
+            //this.Hide();
+            //this.Close();
+            //this.axWindowsMediaPlayer1.close();
+            this.Dispose();
+            
         }
 
         private void pictureBox_Minimize_Click(object sender, EventArgs e)

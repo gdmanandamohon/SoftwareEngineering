@@ -421,20 +421,21 @@ namespace view
             }
         }
 
-        VideoMediaplayer videomp = new VideoMediaplayer();
+       //VideoMediaplayer videomp = new VideoMediaplayer();
         int count_toggle = 0;
         private void videoplayer_pictureBox_Click(object sender, EventArgs e)
         {
             if (count_toggle % 2 == 0)
             {
-                videomp.Show();
+                new VideoMediaplayer().Show();
+                //videomp.Visible = true;
                 count_toggle++;
             }
 
 
             else
             {
-                videomp.Hide();
+                new VideoMediaplayer().Hide();
                 count_toggle++;
             }
                 
@@ -459,6 +460,16 @@ namespace view
         private void videoplayer_pictureBox_MouseLeave(object sender, EventArgs e)
         {
             videoplayer_pictureBox.BackColor = Color.Gray;
+        }
+
+        private void Dumeter_picbox_MouseEnter(object sender, EventArgs e)
+        {
+            Dumeter_picbox.BackColor = Color.DimGray;
+        }
+
+        private void Dumeter_picbox_MouseLeave(object sender, EventArgs e)
+        {
+            Dumeter_picbox.BackColor = Color.Gray;
         }
 
     }

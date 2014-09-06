@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.TitleBar = new System.Windows.Forms.Panel();
             this.Exit_PicBox = new System.Windows.Forms.PictureBox();
@@ -68,7 +68,7 @@
             this.panel_alarmClock = new System.Windows.Forms.Panel();
             this.options_panel = new System.Windows.Forms.Panel();
             this.WMP_pictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Dumeter_picbox = new System.Windows.Forms.PictureBox();
             this.Alarm_picBox = new System.Windows.Forms.PictureBox();
             this.videoplayer_pictureBox = new System.Windows.Forms.PictureBox();
             this.CCleanerpictureBox = new System.Windows.Forms.PictureBox();
@@ -90,7 +90,7 @@
             this.panel_alarmClock.SuspendLayout();
             this.options_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dumeter_picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoplayer_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).BeginInit();
@@ -430,7 +430,7 @@
             // 
             this.options_panel.BackColor = System.Drawing.Color.Gainsboro;
             this.options_panel.Controls.Add(this.WMP_pictureBox);
-            this.options_panel.Controls.Add(this.pictureBox5);
+            this.options_panel.Controls.Add(this.Dumeter_picbox);
             this.options_panel.Controls.Add(this.Alarm_picBox);
             this.options_panel.Controls.Add(this.videoplayer_pictureBox);
             this.options_panel.Controls.Add(this.CCleanerpictureBox);
@@ -453,15 +453,17 @@
             this.WMP_pictureBox.MouseEnter += new System.EventHandler(this.WMP_pictureBox_MouseEnter);
             this.WMP_pictureBox.MouseLeave += new System.EventHandler(this.WMP_pictureBox_MouseLeave);
             // 
-            // pictureBox5
+            // Dumeter_picbox
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox5.Location = new System.Drawing.Point(146, 4);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.TabIndex = 45;
-            this.pictureBox5.TabStop = false;
+            this.Dumeter_picbox.BackColor = System.Drawing.Color.Gray;
+            this.Dumeter_picbox.Location = new System.Drawing.Point(146, 4);
+            this.Dumeter_picbox.Margin = new System.Windows.Forms.Padding(2);
+            this.Dumeter_picbox.Name = "Dumeter_picbox";
+            this.Dumeter_picbox.Size = new System.Drawing.Size(30, 30);
+            this.Dumeter_picbox.TabIndex = 45;
+            this.Dumeter_picbox.TabStop = false;
+            this.Dumeter_picbox.MouseEnter += new System.EventHandler(this.Dumeter_picbox_MouseEnter);
+            this.Dumeter_picbox.MouseLeave += new System.EventHandler(this.Dumeter_picbox_MouseLeave);
             // 
             // Alarm_picBox
             // 
@@ -583,31 +585,31 @@
             this.chart_map.AntiAliasing = System.Windows.Forms.DataVisualization.Charting.AntiAliasingStyles.None;
             this.chart_map.BackColor = System.Drawing.Color.Gray;
             this.chart_map.BorderlineColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chart_map.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart_map.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.chart_map.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart_map.Legends.Add(legend3);
             this.chart_map.Location = new System.Drawing.Point(-20, 109);
             this.chart_map.Name = "chart_map";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series9.Color = System.Drawing.Color.Red;
-            series9.IsXValueIndexed = true;
-            series9.LabelForeColor = System.Drawing.Color.White;
-            series9.Legend = "Legend1";
-            series9.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            series9.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series9.Name = "CPU";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series10.Color = System.Drawing.Color.Navy;
-            series10.LabelForeColor = System.Drawing.Color.White;
-            series10.Legend = "Legend1";
-            series10.MarkerColor = System.Drawing.Color.Lime;
-            series10.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
-            series10.Name = "RAM";
-            this.chart_map.Series.Add(series9);
-            this.chart_map.Series.Add(series10);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series5.Color = System.Drawing.Color.Red;
+            series5.IsXValueIndexed = true;
+            series5.LabelForeColor = System.Drawing.Color.White;
+            series5.Legend = "Legend1";
+            series5.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series5.Name = "CPU";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.Navy;
+            series6.LabelForeColor = System.Drawing.Color.White;
+            series6.Legend = "Legend1";
+            series6.MarkerColor = System.Drawing.Color.Lime;
+            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
+            series6.Name = "RAM";
+            this.chart_map.Series.Add(series5);
+            this.chart_map.Series.Add(series6);
             this.chart_map.Size = new System.Drawing.Size(305, 115);
             this.chart_map.TabIndex = 48;
             this.chart_map.Text = "chart1";
@@ -682,7 +684,7 @@
             this.panel_alarmClock.PerformLayout();
             this.options_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dumeter_picbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoplayer_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).EndInit();
@@ -734,7 +736,7 @@
         private System.Windows.Forms.PictureBox CCleanerpictureBox;
         private System.Windows.Forms.PictureBox WMP_pictureBox;
         private System.Windows.Forms.PictureBox videoplayer_pictureBox;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox Dumeter_picbox;
         private System.Windows.Forms.Panel options_panel;
         private System.Windows.Forms.Panel cCleaner_panel;
         private System.Windows.Forms.CheckBox TemporaryInternetFiles_checkBox;
