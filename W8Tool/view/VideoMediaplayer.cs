@@ -102,6 +102,43 @@ namespace view
         {
 
         }
+
+        private void pictureBox_Exit_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pictureBox_Exit_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox_Exit.BackgroundImage = Properties.Resources.cross_hover;
+        }
+
+        private void pictureBox_Exit_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_Exit.BackgroundImage = Properties.Resources.cross_normal;
+        }
+
+        private void pictureBox_Minimize_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox_Minimize.BackgroundImage = Properties.Resources.minimize_hover;
+        }
+
+        private void pictureBox_Minimize_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_Minimize.BackgroundImage = Properties.Resources.minimize_normal;
+        }
+
+        private void pictureBox_Maximize_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox_Maximize.BackgroundImage = Properties.Resources.maximize_hover;
+        }
+
+        private void pictureBox_Maximize_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_Maximize.BackgroundImage = Properties.Resources.maximize_normal;
+        }
+
+       
     }
 
 }

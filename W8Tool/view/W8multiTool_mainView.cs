@@ -17,7 +17,7 @@ namespace view
 {
     public partial class W8multiTool_mainView : Form
     {
-        MainviewController mainviewController_obj = new MainviewController();
+        CPUperformance cpu_perfr_obj = new CPUperformance();
         CCleanerClass cclass = new CCleanerClass();
         public W8multiTool_mainView()
         {
@@ -171,11 +171,11 @@ namespace view
         double x = 6;
         private void timer_PerformanceCounter_Tick(object sender, EventArgs e)
         {
-            int cpu_rate = mainviewController_obj.ProcessorUsages();
+            int cpu_rate = cpu_perfr_obj.ProcessorUsages();
             Cpu_Count_label.Text = cpu_rate.ToString() + " %";
-            Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + " MB";
-            Hdd_Count_label.Text = mainviewController_obj.DiskUsages()+" MB";
-            Battery_Count_label.Text=mainviewController_obj.PowerCalculator()+" %";
+            Ram_Count_label.Text = cpu_perfr_obj.MemoryUsage() + " MB";
+            Hdd_Count_label.Text = cpu_perfr_obj.DiskUsages()+" MB";
+            Battery_Count_label.Text=cpu_perfr_obj.PowerCalculator()+" %";
 
             DataPoint dp2 = new DataPoint(x, cpu_rate);
             chart_map.Series["CPU"].Points.Add(dp2);

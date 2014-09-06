@@ -3,12 +3,11 @@ C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\controller\bin\De
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.csprojResolveAssemblyReference.cache
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.dll
 C:\Users\Debashish\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.pdb
-C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\bin\Debug\controller.dll
-C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\bin\Debug\controller.pdb
-C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.csprojResolveAssemblyReference.cache
-C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.dll
-C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.pdb
 C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\controller\bin\Debug\controller.dll
 C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\controller\bin\Debug\controller.pdb
 C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.dll
 C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.pdb
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\bin\Debug\controller.dll
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\bin\Debug\controller.pdb
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.dll
+C:\Users\Ananda Mohon Ghosh\Documents\GitHub\SoftwareEngineering\W8Tool\controller\obj\Debug\controller.pdb
