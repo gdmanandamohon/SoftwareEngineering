@@ -29,15 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(W8multiTool_mainView));
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.TitleBar = new System.Windows.Forms.Panel();
+            this.Exit_PicBox = new System.Windows.Forms.PictureBox();
             this.Clock_Count_label = new System.Windows.Forms.Label();
+            this.Max_PicBox = new System.Windows.Forms.PictureBox();
             this.menuStrip_menu = new System.Windows.Forms.MenuStrip();
+            this.hiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_20 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_50 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_60 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_80 = new System.Windows.Forms.ToolStripMenuItem();
+            this.opacity_100 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alarrmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Battery_label = new System.Windows.Forms.Label();
             this.Battery_Count_label = new System.Windows.Forms.Label();
             this.Hdd_Count_label = new System.Windows.Forms.Label();
@@ -56,6 +67,11 @@
             this.audio_checkBox = new System.Windows.Forms.CheckBox();
             this.panel_alarmClock = new System.Windows.Forms.Panel();
             this.options_panel = new System.Windows.Forms.Panel();
+            this.WMP_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Dumeter_picbox = new System.Windows.Forms.PictureBox();
+            this.Alarm_picBox = new System.Windows.Forms.PictureBox();
+            this.videoplayer_pictureBox = new System.Windows.Forms.PictureBox();
+            this.CCleanerpictureBox = new System.Windows.Forms.PictureBox();
             this.cCleaner_panel = new System.Windows.Forms.Panel();
             this.RunClean_button = new System.Windows.Forms.Button();
             this.TemporaryInternetFiles_checkBox = new System.Windows.Forms.CheckBox();
@@ -67,37 +83,31 @@
             this.audioopen_button = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.WMP_pictureBox = new System.Windows.Forms.PictureBox();
-            this.Dumeter_picbox = new System.Windows.Forms.PictureBox();
-            this.Alarm_picBox = new System.Windows.Forms.PictureBox();
-            this.videoplayer_pictureBox = new System.Windows.Forms.PictureBox();
-            this.CCleanerpictureBox = new System.Windows.Forms.PictureBox();
-            this.Exit_PicBox = new System.Windows.Forms.PictureBox();
-            this.Max_PicBox = new System.Windows.Forms.PictureBox();
-            this.hiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_20 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_50 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_60 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_80 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opacity_100 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alarrmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_du = new System.Windows.Forms.Panel();
+            this.Download = new System.Windows.Forms.Label();
+            this.Upload = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.performanceCounter_upload = new System.Diagnostics.PerformanceCounter();
+            this.performanceCounter_download = new System.Diagnostics.PerformanceCounter();
             this.TitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
             this.menuStrip_menu.SuspendLayout();
             this.panel_alarmClock.SuspendLayout();
             this.options_panel.SuspendLayout();
-            this.cCleaner_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_map)).BeginInit();
-            this.WMP_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dumeter_picbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoplayer_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).BeginInit();
+            this.cCleaner_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_map)).BeginInit();
+            this.WMP_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.panel_du.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter_upload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter_download)).BeginInit();
             this.SuspendLayout();
             // 
             // timer_clock
@@ -121,6 +131,21 @@
             this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
             this.TitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseUp);
             // 
+            // Exit_PicBox
+            // 
+            this.Exit_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Exit_PicBox.BackgroundImage = global::view.Properties.Resources.exit;
+            this.Exit_PicBox.Location = new System.Drawing.Point(168, 0);
+            this.Exit_PicBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Exit_PicBox.Name = "Exit_PicBox";
+            this.Exit_PicBox.Size = new System.Drawing.Size(20, 20);
+            this.Exit_PicBox.TabIndex = 10;
+            this.Exit_PicBox.TabStop = false;
+            this.Exit_PicBox.Click += new System.EventHandler(this.Exit_PicBox_Click);
+            this.Exit_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Exit_PicBox_MouseDown);
+            this.Exit_PicBox.MouseEnter += new System.EventHandler(this.Exit_PicBox_MouseEnter);
+            this.Exit_PicBox.MouseLeave += new System.EventHandler(this.Exit_PicBox_MouseLeave);
+            // 
             // Clock_Count_label
             // 
             this.Clock_Count_label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -135,6 +160,21 @@
             this.Clock_Count_label.TabIndex = 1;
             this.Clock_Count_label.Text = "CLOCK TIME";
             // 
+            // Max_PicBox
+            // 
+            this.Max_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Max_PicBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Max_PicBox.BackgroundImage")));
+            this.Max_PicBox.Location = new System.Drawing.Point(148, 0);
+            this.Max_PicBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Max_PicBox.Name = "Max_PicBox";
+            this.Max_PicBox.Size = new System.Drawing.Size(20, 20);
+            this.Max_PicBox.TabIndex = 9;
+            this.Max_PicBox.TabStop = false;
+            this.Max_PicBox.Click += new System.EventHandler(this.Max_PicBox_Click);
+            this.Max_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Max_PicBox_MouseDown);
+            this.Max_PicBox.MouseEnter += new System.EventHandler(this.Max_PicBox_MouseEnter);
+            this.Max_PicBox.MouseLeave += new System.EventHandler(this.Max_PicBox_MouseLeave);
+            // 
             // menuStrip_menu
             // 
             this.menuStrip_menu.AutoSize = false;
@@ -147,6 +187,77 @@
             this.menuStrip_menu.Size = new System.Drawing.Size(81, 24);
             this.menuStrip_menu.TabIndex = 34;
             this.menuStrip_menu.Text = "menuStrip1";
+            // 
+            // hiToolStripMenuItem
+            // 
+            this.hiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opacityToolStripMenuItem,
+            this.alarrmToolStripMenuItem});
+            this.hiToolStripMenuItem.Image = global::view.Properties.Resources.menu;
+            this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
+            this.hiToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            // 
+            // opacityToolStripMenuItem
+            // 
+            this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opacity_10,
+            this.opacity_20,
+            this.opacity_50,
+            this.opacity_60,
+            this.opacity_80,
+            this.opacity_100});
+            this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
+            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.opacityToolStripMenuItem.Text = "Opacity";
+            // 
+            // opacity_10
+            // 
+            this.opacity_10.Name = "opacity_10";
+            this.opacity_10.Size = new System.Drawing.Size(92, 22);
+            this.opacity_10.Text = "10";
+            this.opacity_10.Click += new System.EventHandler(this.opacity_10_Click);
+            // 
+            // opacity_20
+            // 
+            this.opacity_20.Name = "opacity_20";
+            this.opacity_20.Size = new System.Drawing.Size(92, 22);
+            this.opacity_20.Text = "30";
+            this.opacity_20.Click += new System.EventHandler(this.opacity_20_Click);
+            // 
+            // opacity_50
+            // 
+            this.opacity_50.Name = "opacity_50";
+            this.opacity_50.Size = new System.Drawing.Size(92, 22);
+            this.opacity_50.Text = "50";
+            this.opacity_50.Click += new System.EventHandler(this.opacity_50_Click);
+            // 
+            // opacity_60
+            // 
+            this.opacity_60.Name = "opacity_60";
+            this.opacity_60.Size = new System.Drawing.Size(92, 22);
+            this.opacity_60.Text = "60";
+            this.opacity_60.Click += new System.EventHandler(this.opacity_60_Click);
+            // 
+            // opacity_80
+            // 
+            this.opacity_80.Name = "opacity_80";
+            this.opacity_80.Size = new System.Drawing.Size(92, 22);
+            this.opacity_80.Text = "80";
+            this.opacity_80.Click += new System.EventHandler(this.opacity_80_Click);
+            // 
+            // opacity_100
+            // 
+            this.opacity_100.Name = "opacity_100";
+            this.opacity_100.Size = new System.Drawing.Size(92, 22);
+            this.opacity_100.Text = "100";
+            this.opacity_100.Click += new System.EventHandler(this.opacity_100_Click);
+            // 
+            // alarrmToolStripMenuItem
+            // 
+            this.alarrmToolStripMenuItem.Name = "alarrmToolStripMenuItem";
+            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.alarrmToolStripMenuItem.Text = "Exit";
+            this.alarrmToolStripMenuItem.Click += new System.EventHandler(this.alarrmToolStripMenuItem_Click);
             // 
             // Battery_label
             // 
@@ -345,6 +456,77 @@
             this.options_panel.Size = new System.Drawing.Size(181, 37);
             this.options_panel.TabIndex = 46;
             // 
+            // WMP_pictureBox
+            // 
+            this.WMP_pictureBox.BackColor = System.Drawing.Color.Gray;
+            this.WMP_pictureBox.BackgroundImage = global::view.Properties.Resources.media_player;
+            this.WMP_pictureBox.Location = new System.Drawing.Point(74, 4);
+            this.WMP_pictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.WMP_pictureBox.Name = "WMP_pictureBox";
+            this.WMP_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.WMP_pictureBox.TabIndex = 43;
+            this.WMP_pictureBox.TabStop = false;
+            this.WMP_pictureBox.Click += new System.EventHandler(this.WMP_pictureBox_Click);
+            this.WMP_pictureBox.MouseEnter += new System.EventHandler(this.WMP_pictureBox_MouseEnter);
+            this.WMP_pictureBox.MouseLeave += new System.EventHandler(this.WMP_pictureBox_MouseLeave);
+            // 
+            // Dumeter_picbox
+            // 
+            this.Dumeter_picbox.BackColor = System.Drawing.Color.Gray;
+            this.Dumeter_picbox.BackgroundImage = global::view.Properties.Resources.netmeter;
+            this.Dumeter_picbox.Location = new System.Drawing.Point(146, 4);
+            this.Dumeter_picbox.Margin = new System.Windows.Forms.Padding(2);
+            this.Dumeter_picbox.Name = "Dumeter_picbox";
+            this.Dumeter_picbox.Size = new System.Drawing.Size(30, 30);
+            this.Dumeter_picbox.TabIndex = 45;
+            this.Dumeter_picbox.TabStop = false;
+            this.Dumeter_picbox.Click += new System.EventHandler(this.Dumeter_picbox_Click);
+            this.Dumeter_picbox.MouseEnter += new System.EventHandler(this.Dumeter_picbox_MouseEnter);
+            this.Dumeter_picbox.MouseLeave += new System.EventHandler(this.Dumeter_picbox_MouseLeave);
+            // 
+            // Alarm_picBox
+            // 
+            this.Alarm_picBox.BackColor = System.Drawing.Color.Gray;
+            this.Alarm_picBox.BackgroundImage = global::view.Properties.Resources.alarmclock;
+            this.Alarm_picBox.Location = new System.Drawing.Point(4, 4);
+            this.Alarm_picBox.Margin = new System.Windows.Forms.Padding(2);
+            this.Alarm_picBox.Name = "Alarm_picBox";
+            this.Alarm_picBox.Size = new System.Drawing.Size(30, 30);
+            this.Alarm_picBox.TabIndex = 41;
+            this.Alarm_picBox.TabStop = false;
+            this.Alarm_picBox.Click += new System.EventHandler(this.Alarm_picBox_Click);
+            this.Alarm_picBox.MouseEnter += new System.EventHandler(this.Alarm_picBox_MouseEnter);
+            this.Alarm_picBox.MouseLeave += new System.EventHandler(this.Alarm_picBox_MouseLeave);
+            // 
+            // videoplayer_pictureBox
+            // 
+            this.videoplayer_pictureBox.BackColor = System.Drawing.Color.Gray;
+            this.videoplayer_pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoplayer_pictureBox.BackgroundImage")));
+            this.videoplayer_pictureBox.Location = new System.Drawing.Point(110, 4);
+            this.videoplayer_pictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.videoplayer_pictureBox.Name = "videoplayer_pictureBox";
+            this.videoplayer_pictureBox.Size = new System.Drawing.Size(30, 30);
+            this.videoplayer_pictureBox.TabIndex = 44;
+            this.videoplayer_pictureBox.TabStop = false;
+            this.videoplayer_pictureBox.Click += new System.EventHandler(this.videoplayer_pictureBox_Click);
+            this.videoplayer_pictureBox.MouseEnter += new System.EventHandler(this.videoplayer_pictureBox_MouseEnter);
+            this.videoplayer_pictureBox.MouseLeave += new System.EventHandler(this.videoplayer_pictureBox_MouseLeave);
+            // 
+            // CCleanerpictureBox
+            // 
+            this.CCleanerpictureBox.BackColor = System.Drawing.Color.Gray;
+            this.CCleanerpictureBox.BackgroundImage = global::view.Properties.Resources.CClean;
+            this.CCleanerpictureBox.InitialImage = null;
+            this.CCleanerpictureBox.Location = new System.Drawing.Point(39, 4);
+            this.CCleanerpictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CCleanerpictureBox.Name = "CCleanerpictureBox";
+            this.CCleanerpictureBox.Size = new System.Drawing.Size(30, 30);
+            this.CCleanerpictureBox.TabIndex = 42;
+            this.CCleanerpictureBox.TabStop = false;
+            this.CCleanerpictureBox.Click += new System.EventHandler(this.CCleanerpictureBox_Click);
+            this.CCleanerpictureBox.MouseEnter += new System.EventHandler(this.CCleanerpictureBox_MouseEnter);
+            this.CCleanerpictureBox.MouseLeave += new System.EventHandler(this.CCleanerpictureBox_MouseLeave);
+            // 
             // cCleaner_panel
             // 
             this.cCleaner_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -486,175 +668,71 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // WMP_pictureBox
+            // panel_du
             // 
-            this.WMP_pictureBox.BackColor = System.Drawing.Color.Gray;
-            this.WMP_pictureBox.BackgroundImage = global::view.Properties.Resources.media_player;
-            this.WMP_pictureBox.Location = new System.Drawing.Point(74, 4);
-            this.WMP_pictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.WMP_pictureBox.Name = "WMP_pictureBox";
-            this.WMP_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.WMP_pictureBox.TabIndex = 43;
-            this.WMP_pictureBox.TabStop = false;
-            this.WMP_pictureBox.Click += new System.EventHandler(this.WMP_pictureBox_Click);
-            this.WMP_pictureBox.MouseEnter += new System.EventHandler(this.WMP_pictureBox_MouseEnter);
-            this.WMP_pictureBox.MouseLeave += new System.EventHandler(this.WMP_pictureBox_MouseLeave);
+            this.panel_du.BackColor = System.Drawing.Color.DarkGray;
+            this.panel_du.Controls.Add(this.Download);
+            this.panel_du.Controls.Add(this.Upload);
+            this.panel_du.Controls.Add(this.label4);
+            this.panel_du.Controls.Add(this.label3);
+            this.panel_du.Location = new System.Drawing.Point(0, 268);
+            this.panel_du.Name = "panel_du";
+            this.panel_du.Size = new System.Drawing.Size(190, 93);
+            this.panel_du.TabIndex = 50;
             // 
-            // Dumeter_picbox
+            // Download
             // 
-            this.Dumeter_picbox.BackColor = System.Drawing.Color.Gray;
-            this.Dumeter_picbox.Location = new System.Drawing.Point(146, 4);
-            this.Dumeter_picbox.Margin = new System.Windows.Forms.Padding(2);
-            this.Dumeter_picbox.Name = "Dumeter_picbox";
-            this.Dumeter_picbox.Size = new System.Drawing.Size(30, 30);
-            this.Dumeter_picbox.TabIndex = 45;
-            this.Dumeter_picbox.TabStop = false;
-            this.Dumeter_picbox.MouseEnter += new System.EventHandler(this.Dumeter_picbox_MouseEnter);
-            this.Dumeter_picbox.MouseLeave += new System.EventHandler(this.Dumeter_picbox_MouseLeave);
+            this.Download.AutoSize = true;
+            this.Download.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Download.ForeColor = System.Drawing.Color.White;
+            this.Download.Location = new System.Drawing.Point(110, 50);
+            this.Download.Name = "Download";
+            this.Download.Size = new System.Drawing.Size(60, 24);
+            this.Download.TabIndex = 3;
+            this.Download.Text = "label6";
             // 
-            // Alarm_picBox
+            // Upload
             // 
-            this.Alarm_picBox.BackColor = System.Drawing.Color.Gray;
-            this.Alarm_picBox.BackgroundImage = global::view.Properties.Resources.alarmclock;
-            this.Alarm_picBox.Location = new System.Drawing.Point(4, 4);
-            this.Alarm_picBox.Margin = new System.Windows.Forms.Padding(2);
-            this.Alarm_picBox.Name = "Alarm_picBox";
-            this.Alarm_picBox.Size = new System.Drawing.Size(30, 30);
-            this.Alarm_picBox.TabIndex = 41;
-            this.Alarm_picBox.TabStop = false;
-            this.Alarm_picBox.Click += new System.EventHandler(this.Alarm_picBox_Click);
-            this.Alarm_picBox.MouseEnter += new System.EventHandler(this.Alarm_picBox_MouseEnter);
-            this.Alarm_picBox.MouseLeave += new System.EventHandler(this.Alarm_picBox_MouseLeave);
+            this.Upload.AutoSize = true;
+            this.Upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Upload.ForeColor = System.Drawing.Color.White;
+            this.Upload.Location = new System.Drawing.Point(110, 19);
+            this.Upload.Name = "Upload";
+            this.Upload.Size = new System.Drawing.Size(60, 24);
+            this.Upload.TabIndex = 2;
+            this.Upload.Text = "label5";
+            this.Upload.Click += new System.EventHandler(this.label5_Click);
             // 
-            // videoplayer_pictureBox
+            // label4
             // 
-            this.videoplayer_pictureBox.BackColor = System.Drawing.Color.Gray;
-            this.videoplayer_pictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("videoplayer_pictureBox.BackgroundImage")));
-            this.videoplayer_pictureBox.Location = new System.Drawing.Point(110, 4);
-            this.videoplayer_pictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.videoplayer_pictureBox.Name = "videoplayer_pictureBox";
-            this.videoplayer_pictureBox.Size = new System.Drawing.Size(30, 30);
-            this.videoplayer_pictureBox.TabIndex = 44;
-            this.videoplayer_pictureBox.TabStop = false;
-            this.videoplayer_pictureBox.Click += new System.EventHandler(this.videoplayer_pictureBox_Click);
-            this.videoplayer_pictureBox.MouseEnter += new System.EventHandler(this.videoplayer_pictureBox_MouseEnter);
-            this.videoplayer_pictureBox.MouseLeave += new System.EventHandler(this.videoplayer_pictureBox_MouseLeave);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "DOWNLOAD";
             // 
-            // CCleanerpictureBox
+            // label3
             // 
-            this.CCleanerpictureBox.BackColor = System.Drawing.Color.Gray;
-            this.CCleanerpictureBox.BackgroundImage = global::view.Properties.Resources.CClean;
-            this.CCleanerpictureBox.InitialImage = null;
-            this.CCleanerpictureBox.Location = new System.Drawing.Point(39, 4);
-            this.CCleanerpictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.CCleanerpictureBox.Name = "CCleanerpictureBox";
-            this.CCleanerpictureBox.Size = new System.Drawing.Size(30, 30);
-            this.CCleanerpictureBox.TabIndex = 42;
-            this.CCleanerpictureBox.TabStop = false;
-            this.CCleanerpictureBox.Click += new System.EventHandler(this.CCleanerpictureBox_Click);
-            this.CCleanerpictureBox.MouseEnter += new System.EventHandler(this.CCleanerpictureBox_MouseEnter);
-            this.CCleanerpictureBox.MouseLeave += new System.EventHandler(this.CCleanerpictureBox_MouseLeave);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "UPLOAD ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Exit_PicBox
+            // performanceCounter_upload
             // 
-            this.Exit_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Exit_PicBox.BackgroundImage = global::view.Properties.Resources.exit;
-            this.Exit_PicBox.Location = new System.Drawing.Point(168, 0);
-            this.Exit_PicBox.Margin = new System.Windows.Forms.Padding(2);
-            this.Exit_PicBox.Name = "Exit_PicBox";
-            this.Exit_PicBox.Size = new System.Drawing.Size(20, 20);
-            this.Exit_PicBox.TabIndex = 10;
-            this.Exit_PicBox.TabStop = false;
-            this.Exit_PicBox.Click += new System.EventHandler(this.Exit_PicBox_Click);
-            this.Exit_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Exit_PicBox_MouseDown);
-            this.Exit_PicBox.MouseEnter += new System.EventHandler(this.Exit_PicBox_MouseEnter);
-            this.Exit_PicBox.MouseLeave += new System.EventHandler(this.Exit_PicBox_MouseLeave);
+            this.performanceCounter_upload.CategoryName = "Network Interface";
+            this.performanceCounter_upload.CounterName = "Bytes Sent/sec";
+            this.performanceCounter_upload.InstanceName = "DW1520 Wireless-N Half-Mini Card";
             // 
-            // Max_PicBox
+            // performanceCounter_download
             // 
-            this.Max_PicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Max_PicBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Max_PicBox.BackgroundImage")));
-            this.Max_PicBox.Location = new System.Drawing.Point(148, 0);
-            this.Max_PicBox.Margin = new System.Windows.Forms.Padding(2);
-            this.Max_PicBox.Name = "Max_PicBox";
-            this.Max_PicBox.Size = new System.Drawing.Size(20, 20);
-            this.Max_PicBox.TabIndex = 9;
-            this.Max_PicBox.TabStop = false;
-            this.Max_PicBox.Click += new System.EventHandler(this.Max_PicBox_Click);
-            this.Max_PicBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Max_PicBox_MouseDown);
-            this.Max_PicBox.MouseEnter += new System.EventHandler(this.Max_PicBox_MouseEnter);
-            this.Max_PicBox.MouseLeave += new System.EventHandler(this.Max_PicBox_MouseLeave);
-            // 
-            // hiToolStripMenuItem
-            // 
-            this.hiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opacityToolStripMenuItem,
-            this.alarrmToolStripMenuItem});
-            this.hiToolStripMenuItem.Image = global::view.Properties.Resources.menu;
-            this.hiToolStripMenuItem.Name = "hiToolStripMenuItem";
-            this.hiToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
-            // 
-            // opacityToolStripMenuItem
-            // 
-            this.opacityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opacity_10,
-            this.opacity_20,
-            this.opacity_50,
-            this.opacity_60,
-            this.opacity_80,
-            this.opacity_100});
-            this.opacityToolStripMenuItem.Name = "opacityToolStripMenuItem";
-            this.opacityToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.opacityToolStripMenuItem.Text = "Opacity";
-            // 
-            // opacity_10
-            // 
-            this.opacity_10.Name = "opacity_10";
-            this.opacity_10.Size = new System.Drawing.Size(92, 22);
-            this.opacity_10.Text = "10";
-            this.opacity_10.Click += new System.EventHandler(this.opacity_10_Click);
-            // 
-            // opacity_20
-            // 
-            this.opacity_20.Name = "opacity_20";
-            this.opacity_20.Size = new System.Drawing.Size(92, 22);
-            this.opacity_20.Text = "30";
-            this.opacity_20.Click += new System.EventHandler(this.opacity_20_Click);
-            // 
-            // opacity_50
-            // 
-            this.opacity_50.Name = "opacity_50";
-            this.opacity_50.Size = new System.Drawing.Size(92, 22);
-            this.opacity_50.Text = "50";
-            this.opacity_50.Click += new System.EventHandler(this.opacity_50_Click);
-            // 
-            // opacity_60
-            // 
-            this.opacity_60.Name = "opacity_60";
-            this.opacity_60.Size = new System.Drawing.Size(92, 22);
-            this.opacity_60.Text = "60";
-            this.opacity_60.Click += new System.EventHandler(this.opacity_60_Click);
-            // 
-            // opacity_80
-            // 
-            this.opacity_80.Name = "opacity_80";
-            this.opacity_80.Size = new System.Drawing.Size(92, 22);
-            this.opacity_80.Text = "80";
-            this.opacity_80.Click += new System.EventHandler(this.opacity_80_Click);
-            // 
-            // opacity_100
-            // 
-            this.opacity_100.Name = "opacity_100";
-            this.opacity_100.Size = new System.Drawing.Size(92, 22);
-            this.opacity_100.Text = "100";
-            this.opacity_100.Click += new System.EventHandler(this.opacity_100_Click);
-            // 
-            // alarrmToolStripMenuItem
-            // 
-            this.alarrmToolStripMenuItem.Name = "alarrmToolStripMenuItem";
-            this.alarrmToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.alarrmToolStripMenuItem.Text = "Exit";
-            this.alarrmToolStripMenuItem.Click += new System.EventHandler(this.alarrmToolStripMenuItem_Click);
+            this.performanceCounter_download.CategoryName = "Network Interface";
+            this.performanceCounter_download.CounterName = "Bytes Received/sec";
+            this.performanceCounter_download.InstanceName = "DW1520 Wireless-N Half-Mini Card";
             // 
             // W8multiTool_mainView
             // 
@@ -662,6 +740,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(187, 360);
+            this.Controls.Add(this.panel_du);
             this.Controls.Add(this.WMP_panel);
             this.Controls.Add(this.chart_map);
             this.Controls.Add(this.cCleaner_panel);
@@ -685,23 +764,27 @@
             this.MouseLeave += new System.EventHandler(this.W8multiTool_mainView_MouseLeave);
             this.TitleBar.ResumeLayout(false);
             this.TitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).EndInit();
             this.menuStrip_menu.ResumeLayout(false);
             this.menuStrip_menu.PerformLayout();
             this.panel_alarmClock.ResumeLayout(false);
             this.panel_alarmClock.PerformLayout();
             this.options_panel.ResumeLayout(false);
-            this.cCleaner_panel.ResumeLayout(false);
-            this.cCleaner_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_map)).EndInit();
-            this.WMP_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WMP_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dumeter_picbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm_picBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoplayer_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CCleanerpictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit_PicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Max_PicBox)).EndInit();
+            this.cCleaner_panel.ResumeLayout(false);
+            this.cCleaner_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_map)).EndInit();
+            this.WMP_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.panel_du.ResumeLayout(false);
+            this.panel_du.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter_upload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter_download)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -758,6 +841,13 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button audioopen_button;
+        private System.Windows.Forms.Panel panel_du;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Upload;
+        private System.Windows.Forms.Label Download;
+        private System.Diagnostics.PerformanceCounter performanceCounter_upload;
+        private System.Diagnostics.PerformanceCounter performanceCounter_download;
     }
 }
 

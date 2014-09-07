@@ -41,5 +41,19 @@ namespace controller
             int power_remain = (int)powerCounter.NextValue();
             return power_remain.ToString();
         }
+
+        public int upload()
+        {
+            PerformanceCounter powerCounter = new PerformanceCounter("Network Interface", "Bytes Sent/sec", "DW1520 Wireless-N Half-Mini Card");
+            int x = (int)powerCounter.NextValue();
+            return x / 1024;
+        }
+
+        public float download()
+        {
+            PerformanceCounter powerCounter = new PerformanceCounter("Network Interface", "Bytes Received/sec", "DW1520 Wireless-N Half-Mini Card");
+            float x = (float)powerCounter.NextValue();
+            return x / 1024;
+        }
     }
 }
