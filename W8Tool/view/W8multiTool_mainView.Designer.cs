@@ -760,6 +760,7 @@
             this.MainMenuStrip = this.menuStrip_menu;
             this.Name = "W8multiTool_mainView";
             this.Text = "W8MultiTool";
+            this.Load += new System.EventHandler(this.W8multiTool_mainView_Load);
             this.MouseEnter += new System.EventHandler(this.W8multiTool_mainView_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.W8multiTool_mainView_MouseLeave);
             this.TitleBar.ResumeLayout(false);

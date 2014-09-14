@@ -176,7 +176,7 @@ namespace view
             Ram_Count_label.Text = cpu_perfr_obj.MemoryUsage() + " MB";
             Hdd_Count_label.Text = cpu_perfr_obj.DiskUsages()+" MB";
             Battery_Count_label.Text=cpu_perfr_obj.PowerCalculator()+" %";
-            int upl = (int)performanceCounter_upload.NextValue();
+            double upl = (double) performanceCounter_upload.NextValue();
             upl = upl / 1024;
             Upload.Text = upl.ToString() + " KB";
             int dpl = (int)performanceCounter_download.NextValue();
@@ -514,6 +514,11 @@ namespace view
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void W8multiTool_mainView_Load(object sender, EventArgs e)
         {
 
         }

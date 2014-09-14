@@ -1,0 +1,7 @@
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\TestProject\bin\Debug\TestProject.dll
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\TestProject\bin\Debug\TestProject.pdb
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\TestProject\bin\Debug\controller.dll
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\TestProject\bin\Debug\controller.pdb
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\TestProject\obj\Debug\TestProject.dll
+C:\Users\pra8ashiik_nv\Documents\GitHub\SoftwareEngineering\W8Tool\TestProject\obj\Debug\TestProject.pdb

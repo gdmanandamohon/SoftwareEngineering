@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
+                                             
 namespace controller
 {
    public class CPUperformance
@@ -51,9 +52,12 @@ namespace controller
 
         public float download()
         {
+            
             PerformanceCounter powerCounter = new PerformanceCounter("Network Interface", "Bytes Received/sec", "DW1520 Wireless-N Half-Mini Card");
-            float x = (float)powerCounter.NextValue();
-            return x / 1024;
+            float x = (float) powerCounter.NextValue();
+            return (x/1024);
+           
+
         }
     }
 }
