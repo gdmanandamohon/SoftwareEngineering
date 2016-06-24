@@ -40,7 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CCleanerClass.cs" />
-    <Compile Include="MainviewController.cs" />
+    <Compile Include="CPUperformance.cs" />
+    <Compile Include="MediaPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

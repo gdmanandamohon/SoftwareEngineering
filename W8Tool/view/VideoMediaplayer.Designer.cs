@@ -59,7 +59,7 @@
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 23);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(282, 226);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(302, 247);
             this.axWindowsMediaPlayer1.TabIndex = 0;
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
@@ -75,7 +75,7 @@
             this.panel_menubar.Controls.Add(this.pictureBox_Exit);
             this.panel_menubar.Location = new System.Drawing.Point(-1, 0);
             this.panel_menubar.Name = "panel_menubar";
-            this.panel_menubar.Size = new System.Drawing.Size(286, 24);
+            this.panel_menubar.Size = new System.Drawing.Size(303, 24);
             this.panel_menubar.TabIndex = 1;
             this.panel_menubar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_menubar_MouseDown);
             this.panel_menubar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_menubar_MouseUp);
@@ -94,23 +94,29 @@
             // 
             this.pictureBox_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Minimize.BackColor = System.Drawing.Color.Red;
-            this.pictureBox_Minimize.Location = new System.Drawing.Point(221, 2);
+            this.pictureBox_Minimize.BackgroundImage = global::view.Properties.Resources.minimize_normal;
+            this.pictureBox_Minimize.Location = new System.Drawing.Point(238, 2);
             this.pictureBox_Minimize.Name = "pictureBox_Minimize";
             this.pictureBox_Minimize.Size = new System.Drawing.Size(20, 20);
             this.pictureBox_Minimize.TabIndex = 4;
             this.pictureBox_Minimize.TabStop = false;
             this.pictureBox_Minimize.Click += new System.EventHandler(this.pictureBox_Minimize_Click);
+            this.pictureBox_Minimize.MouseEnter += new System.EventHandler(this.pictureBox_Minimize_MouseEnter);
+            this.pictureBox_Minimize.MouseLeave += new System.EventHandler(this.pictureBox_Minimize_MouseLeave);
             // 
             // pictureBox_Maximize
             // 
             this.pictureBox_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Maximize.BackColor = System.Drawing.Color.Red;
-            this.pictureBox_Maximize.Location = new System.Drawing.Point(242, 2);
+            this.pictureBox_Maximize.BackgroundImage = global::view.Properties.Resources.maximize_normal;
+            this.pictureBox_Maximize.Location = new System.Drawing.Point(259, 2);
             this.pictureBox_Maximize.Name = "pictureBox_Maximize";
             this.pictureBox_Maximize.Size = new System.Drawing.Size(20, 20);
             this.pictureBox_Maximize.TabIndex = 3;
             this.pictureBox_Maximize.TabStop = false;
             this.pictureBox_Maximize.Click += new System.EventHandler(this.pictureBox_Maximize_Click);
+            this.pictureBox_Maximize.MouseEnter += new System.EventHandler(this.pictureBox_Maximize_MouseEnter);
+            this.pictureBox_Maximize.MouseLeave += new System.EventHandler(this.pictureBox_Maximize_MouseLeave);
             // 
             // menuStrip_titleBar
             // 
@@ -137,26 +143,30 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // pictureBox_Exit
             // 
             this.pictureBox_Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Exit.BackColor = System.Drawing.Color.Red;
-            this.pictureBox_Exit.Location = new System.Drawing.Point(263, 2);
+            this.pictureBox_Exit.BackgroundImage = global::view.Properties.Resources.cross_normal;
+            this.pictureBox_Exit.Location = new System.Drawing.Point(280, 2);
             this.pictureBox_Exit.Name = "pictureBox_Exit";
             this.pictureBox_Exit.Size = new System.Drawing.Size(20, 20);
             this.pictureBox_Exit.TabIndex = 2;
             this.pictureBox_Exit.TabStop = false;
             this.pictureBox_Exit.Click += new System.EventHandler(this.pictureBox_Exit_Click);
+            this.pictureBox_Exit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_Exit_MouseClick);
+            this.pictureBox_Exit.MouseEnter += new System.EventHandler(this.pictureBox_Exit_MouseEnter);
+            this.pictureBox_Exit.MouseLeave += new System.EventHandler(this.pictureBox_Exit_MouseLeave);
             // 
             // timer_move
             // 
@@ -167,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(301, 270);
             this.Controls.Add(this.panel_menubar);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

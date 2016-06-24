@@ -17,7 +17,7 @@ namespace view
 {
     public partial class W8multiTool_mainView : Form
     {
-        MainviewController mainviewController_obj = new MainviewController();
+        CPUperformance cpu_perfr_obj = new CPUperformance();
         CCleanerClass cclass = new CCleanerClass();
         public W8multiTool_mainView()
         {
@@ -171,11 +171,19 @@ namespace view
         double x = 6;
         private void timer_PerformanceCounter_Tick(object sender, EventArgs e)
         {
-            int cpu_rate = mainviewController_obj.ProcessorUsages();
+            int cpu_rate = cpu_perfr_obj.ProcessorUsages();
             Cpu_Count_label.Text = cpu_rate.ToString() + " %";
-            Ram_Count_label.Text = mainviewController_obj.MemoryUsage() + " MB";
-            Hdd_Count_label.Text = mainviewController_obj.DiskUsages()+" MB";
-            Battery_Count_label.Text=mainviewController_obj.PowerCalculator()+" %";
+            Ram_Count_label.Text = cpu_perfr_obj.MemoryUsage() + " MB";
+            Hdd_Count_label.Text = cpu_perfr_obj.DiskUsages()+" MB";
+            Battery_Count_label.Text=cpu_perfr_obj.PowerCalculator()+" %";
+            double upl = (double) performanceCounter_upload.NextValue();
+            upl = upl / 1024;
+            Upload.Text = upl.ToString() + " KB";
+            int dpl = (int)performanceCounter_download.NextValue();
+            dpl = dpl / 1024;
+            Download.Text = dpl.ToString() + " KB";
+            //Upload.Text = cpu_perfr_obj.upload().ToString() + " Byte";
+           // Download.Text = cpu_perfr_obj.download().ToString() + " MB";
 
             DataPoint dp2 = new DataPoint(x, cpu_rate);
             chart_map.Series["CPU"].Points.Add(dp2);
@@ -286,6 +294,7 @@ namespace view
                 WMP_panel.Hide();
                 panel_alarmClock.Show();
                 cCleaner_panel.Hide();
+                panel_du.Hide();
                 panel_alarmClock_togle++;
             }
             else
@@ -309,6 +318,7 @@ namespace view
             {
 
                 this.Size = new System.Drawing.Size(189, 360);
+                panel_du.Hide();
                 cCleaner_panel.Show();
                 panel_alarmClock.Hide();
                 WMP_panel.Hide();
@@ -421,20 +431,22 @@ namespace view
             }
         }
 
-        VideoMediaplayer videomp = new VideoMediaplayer();
+       //VideoMediaplayer videomp = new VideoMediaplayer();
         int count_toggle = 0;
         private void videoplayer_pictureBox_Click(object sender, EventArgs e)
         {
             if (count_toggle % 2 == 0)
             {
-                videomp.Show();
+                new VideoMediaplayer().Show();
+                //videomp.Visible = true;
+                panel_du.Hide();
                 count_toggle++;
             }
 
 
             else
             {
-                videomp.Hide();
+                new VideoMediaplayer().Hide();
                 count_toggle++;
             }
                 
@@ -459,6 +471,56 @@ namespace view
         private void videoplayer_pictureBox_MouseLeave(object sender, EventArgs e)
         {
             videoplayer_pictureBox.BackColor = Color.Gray;
+        }
+
+        private void Dumeter_picbox_MouseEnter(object sender, EventArgs e)
+        {
+            Dumeter_picbox.BackColor = Color.DimGray;
+        }
+
+        private void Dumeter_picbox_MouseLeave(object sender, EventArgs e)
+        {
+            Dumeter_picbox.BackColor = Color.Gray;
+        }
+
+        int panel_duMeter_togle = 0;
+        private void Dumeter_picbox_Click(object sender, EventArgs e)
+        {
+
+            if (panel_duMeter_togle % 2 == 0)
+            {
+
+                this.Size = new System.Drawing.Size(189, 360);
+                panel_du.Show();
+                new VideoMediaplayer().Hide();
+                panel_alarmClock.Hide();
+                cCleaner_panel.Hide();
+                panel_duMeter_togle++;
+            }
+            else
+            {
+                maximize_form();
+                panel_duMeter_togle++;
+            }
+            //panel_du.Show();
+           // new VideoMediaplayer().Hide();
+            //panel_alarmClock.Hide();
+            //cCleaner_panel.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void W8multiTool_mainView_Load(object sender, EventArgs e)
+        {
+
         }
 
     }
